@@ -1,0 +1,9 @@
+Le système MDC, Modèle Vue Contrôleur, est un type d'architecture de dossiers.
+Cette architecture se divise en trois dossiers, modèle, vue et contrôleur.
+
+
+Le dossier 'vue' contiens toute la partie graphique du site, comme par exemple les balises html.
+
+Le dossier 'modèle' contiens contiens les informations internes du site, comme par exemple les bases de données.
+
+Le dossier 'contrôleur' contiens les codes modifiants le 'modèle' et la 'vue', comme par exemple les fonctions et les scripts.
