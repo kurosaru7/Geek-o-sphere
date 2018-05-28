@@ -1,2 +1,3 @@
 - Change la colonne "quantité" --> "quantite".
 - Rectifier la casse des "sous-catégories" dans "articles".
+- Changer "sous-catégories" --> autre nom.
