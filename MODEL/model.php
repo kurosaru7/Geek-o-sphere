@@ -21,7 +21,7 @@ function createAccount($nom,$prenom,$pseudo,$mdp) {
 function dbConnect() {
 
 	try {
-		$bdd = new PDO('mysql:host=localhost;dbname=Geek-O-Sphere', 'root', '9C9D9HNn', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+		$bdd = new PDO('mysql:host=localhost;dbname=Geek-O-Sphere', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		return $bdd;
 	}catch(Exception $e) {
 		die('Erreur : '.$e->getMessage());

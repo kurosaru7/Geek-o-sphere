@@ -2,6 +2,7 @@
 require('../MODEL/model.php');
 
 $accounts = getAccounts();
+$not_valid_info = false;
 
 while($data = $accounts->fetch()) {
 	if(!empty($_GET['pseudo']) || !empty($_GET['mdp'])){
