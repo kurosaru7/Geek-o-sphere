@@ -31,4 +31,3 @@ if(isset($_POST['pseudo'])) {
 require('../VUE/account_creation.php');
 
 ?>
-

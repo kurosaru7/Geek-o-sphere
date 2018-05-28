@@ -20,3 +20,4 @@ if($not_valid_info) {
 	echo ' Not valid information';
 }
 require('../VUE/connection.php');
+?>
