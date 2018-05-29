@@ -1,27 +1,24 @@
 <?php
+	require('../MODEL/model.php');
 
-	$bdd = new PDO('mysql:host=localhost;dbname=geek-o-sphere', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-	$req="";
 	$a=false;
 	if (isset($_SESSION['articles']) && $_SESSION['articles'] != '') {
-		$req = ' categorie="'.$_SESSION['articles'].'"';
+		$partie_1_requete = ' categorie="'.$_SESSION['articles'].'"';
 		$a=true;
 	}
-	$req2="";
+
 	$b=false;
 	if (isset($_SESSION['categorie']) && $_SESSION['categorie'] != '') {
-		$req2 = ' sous_categorie="'.$_SESSION['categorie'].'"';
+		$partie_2_requete = ' sous_categorie="'.$_SESSION['categorie'].'"';
 		$b=true;
 	}
 
-	$reqf="";
 	if ($a == true && $b == true) {
-		$reqf = 'WHERE ('.$req.' AND '.$req2.')';
+		$requete_sql = 'WHERE ('.$partie_1_requete.' AND '.$partie_2_requete.')';
 	} else if ($a == true && $b == false) {
-		$reqf = 'WHERE '.$req;
+		$requete_sql = 'WHERE '.$partie_1_requete;
 	} else if ($a == false && $b == true) {
-		$reqf = 'WHERE '.$req2;
+		$requete_sql = 'WHERE '.$partie_2_requete;
 	}
 
 	print ('<tr>
@@ -35,8 +32,8 @@
 			<td> Sous-Categorie 
 	');
 
-	$requete = $bdd->query('SELECT * FROM articles '.$reqf);
-	while ( $donnees = $requete -> fetch()) {
+	$articles = getArticlesCustom($requete_sql);
+	while ( $donnees = $articles -> fetch()) {
 
 		print ('<tr>
 				<td>'.utf8_encode($donnees['idArticles']).'
@@ -50,5 +47,6 @@
 		);
 
 	}
+	//require('../VUE/main_page.php');
 
 ?>
