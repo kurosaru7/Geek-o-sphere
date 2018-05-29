@@ -4,24 +4,24 @@
 	session_start();
 
 	$req="";
-	$a=0;
+	$a=false;
 	if (isset($_SESSION['articles']) && $_SESSION['articles'] != '') {
 		$req = ' categorie="'.$_SESSION['articles'].'"';
-		$a++;
+		$a=true;
 	}
 	$req2="";
-	$b=0;
+	$b=false;
 	if (isset($_SESSION['categorie']) && $_SESSION['categorie'] != '') {
 		$req2 = ' sous_categorie="'.$_SESSION['categorie'].'"';
-		$b++;
+		$b=true;
 	}
 
 	$reqf="";
-	if ($a == 1 && $b == 1) {
+	if ($a == true && $b == true) {
 		$reqf = 'WHERE ('.$req.' AND '.$req2.')';
-	} else if ($a == 1 && $b == 0) {
+	} else if ($a == true && $b == false) {
 		$reqf = 'WHERE '.$req;
-	} else if ($a == 0 && $b == 1) {
+	} else if ($a == false && $b == true) {
 		$reqf = 'WHERE '.$req2;
 	}
 
