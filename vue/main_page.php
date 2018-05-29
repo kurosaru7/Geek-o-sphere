@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
   </head>
   <body>
+    <?php session_start(); ?>
     <form action="../CONTROLEUR/search.php" method="get">
       <select name="categorie">
         <option value ="">Tout</option>
-        <option value="Informatique">Informatique</option>
-        <option value="High-tech">High-tech</option>
+        <?php include('../CONTROLEUR/Script_main_page_2.php'); ?>
       </select>
       <select name="sous-categorie">
         <option value ="">Tout</option>
-        <option value="Souris">Souris</option>
-        <option value="Clavier">Clavier</option>
-        <option value ="divers">Divers</option>
-        <option value ="ordinateur portable">Ordi</option> 
-        <option value ="Hardware"></option> 
+        <?php include('../CONTROLEUR/Script_main_page_3.php'); ?>
       </select> 
       <button>Chercher</button><br> 
  
