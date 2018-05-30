@@ -22,12 +22,9 @@
 	}
 
 	print ('<tr>
-			<td> ID 
 			<td> Categorie 
-			<td> Nom 
-			<td> Image 
+			<td> Nom
 			<td> Quantité 
-			<td> Nb_Magasin 
 			<td> Prix 
 			<td> Sous-Categorie 
 	');
@@ -36,12 +33,9 @@
 	while ( $donnees = $articles -> fetch()) {
 
 		print ('<tr>
-				<td>'.utf8_encode($donnees['idArticles']).'
 				<td>'.utf8_encode($donnees['categorie']).'
 				<td>'.utf8_encode($donnees['nom']).'
-				<td><img src="./'.utf8_encode($donnees['image']).'">
 				<td>'.utf8_encode($donnees['quantite']).'
-				<td>'.utf8_encode($donnees['idMagasins']).'
 				<td>'.utf8_encode($donnees['prix']).'€
 				<td>'.utf8_encode($donnees['sous_categorie'])
 		);
