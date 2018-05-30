@@ -38,5 +38,20 @@ function getArticlesCustom($requete_sql) {
 
 }
 
+function addArticle($categorie, $nom, $description, $image, $quantite, $idMagasins, $prix, $sous_categorie){
+	$bdd = dbConnect();
+	$articles = $bdd->prepare('INSERT INTO articles(categorie, nom, description, image, quantite, idMagasins, prix, sous_categorie) VALUES (:categorie, :nom, :description, :image, :quantite, :idMagasins, :prix, :sous_categorie)');
+	$request_add->execute(array(
+		'categorie' => $categorie,
+		'nom' => $nom,
+		'description' => $description,
+		'image' => $image,
+		'quantite' => $quantite,
+		'idMagasins' => $idMagasins,
+		'prix' => $prix,
+		'sous_categorie' => $sous_categorie,
+	));
+}
+
 
 
