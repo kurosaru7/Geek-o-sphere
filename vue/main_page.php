@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,7 +6,6 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <?php session_start(); ?>
     <form action="../CONTROLEUR/search.php" method="get">
       <select name="categorie">
         <option value ="">Tout</option>
