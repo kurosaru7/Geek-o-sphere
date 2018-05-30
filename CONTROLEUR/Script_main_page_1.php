@@ -23,10 +23,10 @@
 
 	print ('<tr>
 			<td> Categorie 
+			<td> Sous-Categorie
 			<td> Nom
 			<td> Quantité 
-			<td> Prix 
-			<td> Sous-Categorie 
+			<td> Prix 			 
 	');
 
 	$articles = getArticlesCustom($requete_sql);
@@ -34,10 +34,10 @@
 
 		print ('<tr>
 				<td>'.utf8_encode($donnees['categorie']).'
+				<td>'.utf8_encode($donnees['sous_categorie']).'
 				<td>'.utf8_encode($donnees['nom']).'
 				<td>'.utf8_encode($donnees['quantite']).'
-				<td>'.utf8_encode($donnees['prix']).'€
-				<td>'.utf8_encode($donnees['sous_categorie'])
+				<td>'.utf8_encode($donnees['prix']).'€'
 		);
 
 	}
