@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `Geek-O-Sphere`.`Clients` (
   `pseudo` VARCHAR(45) NULL,
   `credit` DECIMAL(9,2) NULL,
   `idPdLs` INT(3) NOT NULL,
-  `mdp` VARCHAR(20) NULL,
+  `mdp` VARCHAR(100) NULL,
   PRIMARY KEY (`idClients`, `idPdLs`),
   INDEX `fk_clients_PdLs_idx` (`idPdLs` ASC),
   CONSTRAINT `fk_clients_PdLs`
