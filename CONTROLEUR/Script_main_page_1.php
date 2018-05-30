@@ -12,7 +12,7 @@
 		$partie_2_requete = ' sous_categorie="'.$_SESSION['categorie'].'"';
 		$b=true;
 	}
-
+	$requete_sql='';
 	if ($a == true && $b == true) {
 		$requete_sql = 'WHERE ('.$partie_1_requete.' AND '.$partie_2_requete.')';
 	} else if ($a == true && $b == false) {

@@ -74,10 +74,10 @@ CREATE TABLE IF NOT EXISTS `Geek-O-Sphere`.`Articles` (
   `nom` VARCHAR(100) NULL,
   `description` VARCHAR(140) NULL,
   `image` VARCHAR(45) NULL,
-  `quantité` INT(4) NULL,
+  `quantite` INT(4) NULL,
   `idMagasins` INT(3) NOT NULL,
   `prix` DECIMAL(6,2) NULL,
-  `sous-categorie` VARCHAR(50) NULL,
+  `sous_categorie` VARCHAR(50) NULL,
   PRIMARY KEY (`idArticles`, `idMagasins`),
   INDEX `fk_articles_Magasins1_idx` (`idMagasins` ASC),
   CONSTRAINT `fk_articles_Magasins1`
@@ -165,11 +165,36 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Geek-O-Sphere`;
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantité`, `idMagasins`, `prix`, `sous-categorie`) VALUES (1, 'Informatique', 'Razer deathadder elite', 'Souris gaming de la marque razer, une des meilleurs du marché si ce n\'est la meilleure.Equipé dela technologie chroma elle permet une person', 'deathadder_elite.png', 30, 1, 79.99, 'Souris');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantité`, `idMagasins`, `prix`, `sous-categorie`) VALUES (2, 'Informatique', 'Logitech 7B3F', 'Clavier Logitech de moyenne gamme.Bon produit pour ce prix.', 'logitech_73BF.png', 150, 2, 29.99, 'Clavier');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantité`, `idMagasins`, `prix`, `sous-categorie`) VALUES (3, 'High-tech', 'Hand spinner dorée', 'N\'achetez pas, vraiment...', 'hand_spinner_dorée.png', 100, 3, 20.00, 'divers');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantité`, `idMagasins`, `prix`, `sous-categorie`) VALUES (4, 'Informatique', 'Msi Revolution 4', 'Ordinateur portable gaming de haute gamme fait tourner la plupart des jeux récents', 'msi_revolution_4.png', 32, 4, 999.99, 'ordinateur portable');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantité`, `idMagasins`, `prix`, `sous-categorie`) VALUES (5, 'Informatique', 'Barette de RAM 8Go Corsair', 'Barette de mémoire vive de 8Go de la marque Corsair', 'ram8go_corsair.png', 100, 2, 32, 'Hardware');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (1, 'Informatique', 'Razer deathadder elite', 'Souris gaming de la marque razer, une des meilleurs du marché si ce n\'est la meilleure.Equipé dela technologie chroma elle permet une person', 'deathadder_elite.png', 30, 1, 79.99, 'Souris');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (2, 'Informatique', 'Logitech 7B3F', 'Clavier Logitech de moyenne gamme.Bon produit pour ce prix.', 'logitech_73BF.png', 150, 2, 29.99, 'Clavier');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (3, 'High-tech', 'Hand spinner dorée', 'N\'achetez pas, vraiment...', 'hand_spinner_dorée.png', 100, 3, 20.00, 'Divers');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (4, 'Informatique', 'Msi Revolution 4', 'Ordinateur portable gaming de haute gamme fait tourner la plupart des jeux récents', 'msi_revolution_4.png', 32, 4, 999.99, 'Ordinateur Portable');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (5, 'Informatique', 'Barette de RAM 8Go Corsair', 'Barette de mémoire vive de 8Go de la marque Corsair', 'ram8go_corsair.png', 100, 2, 32, 'Hardware');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (6, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (7, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (8, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (9, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (10, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (11, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (12, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (13, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (14, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (15, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (16, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (17, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (18, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (19, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (20, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (21, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (22, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (23, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (24, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (25, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (26, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (27, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (28, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (29, '', '', '', '', 30, 1, 79.99, '');
+INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (30, '', '', '', '', 30, 1, 79.99, '');
 
 COMMIT;
 
