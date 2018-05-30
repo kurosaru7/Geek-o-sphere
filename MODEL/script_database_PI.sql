@@ -170,31 +170,6 @@ INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `descr
 INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (3, 'High-tech', 'Hand spinner dorée', 'N\'achetez pas, vraiment...', 'hand_spinner_dorée.png', 100, 3, 20.00, 'Divers');
 INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (4, 'Informatique', 'Msi Revolution 4', 'Ordinateur portable gaming de haute gamme fait tourner la plupart des jeux récents', 'msi_revolution_4.png', 32, 4, 999.99, 'Ordinateur Portable');
 INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (5, 'Informatique', 'Barette de RAM 8Go Corsair', 'Barette de mémoire vive de 8Go de la marque Corsair', 'ram8go_corsair.png', 100, 2, 32, 'Hardware');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (6, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (7, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (8, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (9, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (10, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (11, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (12, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (13, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (14, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (15, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (16, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (17, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (18, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (19, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (20, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (21, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (22, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (23, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (24, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (25, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (26, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (27, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (28, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (29, '', '', '', '', 30, 1, 79.99, '');
-INSERT INTO `Geek-O-Sphere`.`Articles` (`idArticles`, `categorie`, `nom`, `description`, `image`, `quantite`, `idMagasins`, `prix`, `sous_categorie`) VALUES (30, '', '', '', '', 30, 1, 79.99, '');
 
 COMMIT;
 
@@ -211,4 +186,3 @@ INSERT INTO `Geek-O-Sphere`.`Achats` (`idAchats`, `etat`, `date`, `time`, `idCli
 INSERT INTO `Geek-O-Sphere`.`Achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`) VALUES (5, 'En cours', '2018/05/22', '14:40', 1, 2);
 
 COMMIT;
-

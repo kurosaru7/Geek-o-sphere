@@ -4,8 +4,9 @@
 	<title></title>
 	<link rel="stylesheet" href="test_css_anthony.css" />
 </head>
-<body>
-
+<body><br>
+ ID = 
+<br><br>
 <ul id="nav">
    <li id="nav-home"><a href="#">Accueil</a></li>
    <li id="nav-about"><a href="#">Page Client</a></li>
