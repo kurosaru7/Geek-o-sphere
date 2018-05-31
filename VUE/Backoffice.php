@@ -7,7 +7,7 @@
 	<body>
 		<h1>Back Office </h1>
 		<h3>Ajout de produits en vente</h3>
-		<form action ="Script_add_account.php" name="add_article" method="POST">
+		<form action ="../CONTROLEUR/Script_add_products.php" name="add_article" method="POST">
 			Catégorie :<select name="categorie">
 				<option selected="Catégorie">
 					<option value="Informatique">Informatique</option>
