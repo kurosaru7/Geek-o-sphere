@@ -11,7 +11,11 @@
 		<div>
 			<form action ="index.php" method ="POST">
 				<br><br>
-				<input type = "text" placeholder ="Pseudo" name ="pseudo" id ="psd" value = <?php echo $_POST['pseudo']; ?>><br>
+				<input type = "text" placeholder ="Pseudo" name ="pseudo" id ="psd" value = 
+				<?php if(isset($_POST['pseudo'])) {
+						echo $_POST['pseudo']; 
+				} ?> >
+				<br>
 				<input type = "password" placeholder="Mot de passe" name ="mdp" id="psw"><br>
 				<input type = "submit" value = "Se connecter">
 			</form>

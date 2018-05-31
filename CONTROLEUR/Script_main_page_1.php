@@ -22,12 +22,12 @@
 	}
 
 	print ('<tr>
-			<td> Categorie 
-			<td> Sous-Categorie
-			<td> Nom
-			<td> Quantité 
-			<td> Prix 
-			<td colspan="2">Commander			 
+			<th> Categorie 
+			<th> Sous-Categorie
+			<th> Nom
+			<th> Quantité 
+			<th> Prix 
+			<th colspan="2">Commander			 
 	');
 
 	$articles = getArticlesCustom($requete_sql);

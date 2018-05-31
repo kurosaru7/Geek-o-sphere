@@ -10,16 +10,28 @@
 		<div class="account">
 			<img src="../VUE/logo.png" class="image">
 			<form action ="../CONTROLEUR/Script_account_creation.php" method="POST">
-				<input type = "text" placeholder ="Nom"name = "nom" value = <?php echo $_POST['nom'] ?>><br>
-				<input type = "text" placeholder="Prénom" name = "prenom" value = <?php echo $_POST['prenom'] ?>><br>
-				<input type = "text" name = "pseudo" placeholder = "Pseudo" value = <?php echo $_POST['pseudo'] ?>><br>
+				<input type = "text" placeholder ="Nom"name = "nom" value = <?php
+				if(isset($_POST['nom'])) { 
+					echo $_POST['nom']; 
+				} ?>><br>
+				<input type = "text" placeholder="Prénom" name = "prenom" value = <?php
+				if(isset($_POST['prenom'])) { 
+					echo $_POST['prenom']; 
+				} ?>><br>
+				<input type = "text" name = "pseudo" placeholder = "Pseudo" value = <?php
+				if(isset($_POST['pseudo'])) { 
+					echo $_POST['pseudo']; 
+				} ?>><br>
 				<input type = "password" placeholder="Mot de passe" name = "mdp"><br>
 				<input type = "submit" value = "Créer">
 			</form>
 
 			<br><a href="../index.php"><button class="button2">Retour à la page de connexion</button></a><br>
 		</div>
-		<?php echo $erreur ?>
+		<?php 
+		if(isset($erreur)) {
+			echo $erreur;
+		} ?>
 		</center>
 	</body>
 </html>
