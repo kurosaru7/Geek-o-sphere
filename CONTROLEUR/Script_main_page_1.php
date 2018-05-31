@@ -26,7 +26,8 @@
 			<td> Sous-Categorie
 			<td> Nom
 			<td> Quantité 
-			<td> Prix 			 
+			<td> Prix 
+			<td colspan="2">Commander			 
 	');
 
 	$articles = getArticlesCustom($requete_sql);
@@ -37,7 +38,13 @@
 				<td>'.utf8_encode($donnees['sous_categorie']).'
 				<td>'.utf8_encode($donnees['nom']).'
 				<td>'.utf8_encode($donnees['quantite']).'
-				<td>'.utf8_encode($donnees['prix']).'€'
+				<td>'.utf8_encode($donnees['prix']).'€
+				<td><select>');
+			for ($i=0; $i < $donnees['quantite']; $i++) { 
+				print('<option>'.($i+1).'</option>');
+			}
+		print ('    </select>
+				<td><button>Panier</button>'
 		);
 
 	}
