@@ -65,10 +65,14 @@ th {
 	color: white;
 }
 
+.stock {
+	width:100px;
+}
+
 /*/////////////   Connection/Creation page ///////////////////*/
 
 input[type=text], select {
-	width: 30%;
+	width: 29%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;

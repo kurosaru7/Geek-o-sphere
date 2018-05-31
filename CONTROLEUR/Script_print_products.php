@@ -4,7 +4,7 @@ require('../MODEL/model.php');
 $products = getArticles();
 
 while ($line = $products->fetch()) {
-		echo "<u>".utf8_encode($line["nom"])."</u>&nbsp;", utf8_encode($line["quantite"])," produits actuellement en stock&nbsp<input type='number' name='restock'><br>";
+		echo "<tr><td>".utf8_encode($line["nom"])."</td>&nbsp;","<td>".utf8_encode($line["quantite"])."</td>","<td><input type='number' name='restock'></td></tr>";
 }
 
 ?>

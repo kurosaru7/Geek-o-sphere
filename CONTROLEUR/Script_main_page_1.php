@@ -27,7 +27,8 @@
 			<th> Nom
 			<th> Quantité 
 			<th> Prix 
-			<th colspan="2">Commander			 
+			<th colspan="2">Commander			
+		</tr> 
 	');
 
 	$articles = getArticlesCustom($requete_sql);
@@ -39,9 +40,9 @@
 				<td>'.utf8_encode($donnees['nom']).'
 				<td>'.utf8_encode($donnees['quantite']).'
 				<td>'.utf8_encode($donnees['prix']).'€
-				<td><select>');
+				<td><select class="stock">');
 			for ($i=0; $i < $donnees['quantite']; $i++) { 
-				print('<option>'.($i+1).'</option>');
+				print('<option selected="stock">'.($i+1).'</option>');
 			}
 		print ('    </select>
 				<td><button>Panier</button>'
