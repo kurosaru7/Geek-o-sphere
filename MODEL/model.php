@@ -20,7 +20,7 @@ function getAccounts() {
 
 function createAccount($nom,$prenom,$pseudo,$mdp) {
 	$bdd = dbConnect();
-	$requete_inscription = $bdd->prepare('INSERT INTO clients(nom, prenom, pseudo, mdp) VALUES (:nom, :prenom, :pseudo, :mdp)');
+	$requete_inscription = $bdd->prepare('INSERT INTO clients(nom, prenom, pseudo, mdp,idPdls) VALUES (:nom, :prenom, :pseudo, :mdp,1)');
 	$requete_inscription->execute(array(
 		'nom' => $nom,
 		'prenom' => $prenom,

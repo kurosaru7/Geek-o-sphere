@@ -1,14 +1,23 @@
+<!DOCTYPE html>
 <html>
-<center>
-<form action ="../CONTROLEUR/Script_connection.php" action = GET>
-Connection page
-<br><br>
-Pseudo<input type = text name ="pseudo"><br>
-Password<input type = password name ="mdp"><br>
-<input type = submit value = "Connect">
-</form>
-
-<a href ="../CONTROLEUR/Script_account_creation.php"><button>Create account</button></a>
-</form>
-</center>
+	<head>
+		<title>Page de connexion</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" href="VUE/style.css" />
+	</head>
+	<body>
+		<center>
+		<img src="VUE/logo.png" class ="image" />
+		<div>
+			<form action ="index.php" method ="POST">
+				<br><br>
+				<input type = "text" placeholder ="Pseudo" name ="pseudo" id ="psd" value = <?php echo $_POST['pseudo']; ?>><br>
+				<input type = "password" placeholder="Mot de passe" name ="mdp" id="psw"><br>
+				<input type = "submit" value = "Se connecter">
+			</form>
+			<a href ="CONTROLEUR/Script_account_creation.php"><button class="button">Créer un compte</button></a>
+		</div>
+			<?php echo $not_valid_info ?>
+		</center>
+	</body>
 </html>
