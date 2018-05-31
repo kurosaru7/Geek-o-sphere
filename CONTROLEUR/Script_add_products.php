@@ -1,6 +1,6 @@
 <?php
 
-require('/MODEL/model.php');
+require('../MODEL/model.php');
 
 if(!empty($_POST['nom']) && !empty($_POST['description']) && !empty($_POST['image']) && !empty(is_numeric($_POST['quantite'])) && !empty(is_numeric($_POST['prix'])) && ($_POST['categorie'] !== "Catégorie") && ($_POST['sous_categorie'] !== "Sous-Catégorie") && ($_POST['idMagasins'] !== "Magasins")) {
 
@@ -11,6 +11,6 @@ if(!empty($_POST['nom']) && !empty($_POST['description']) && !empty($_POST['imag
 } else {
 	echo "Tous les champs ne sont pas remplis<br>";
 }
-require('Backoffice.php');
+require('../VUE/Backoffice.php');
 
 ?>
