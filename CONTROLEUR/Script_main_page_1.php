@@ -27,7 +27,8 @@
 			<th> Nom
 			<th> Quantité 
 			<th> Prix 
-			<th colspan="2">Commander			 
+			<th colspan="2">Commander			
+		</tr> 
 	');
 
 	$articles = getArticlesCustom($requete_sql);
