@@ -65,6 +65,10 @@ th {
 	color: white;
 }
 
+.stock {
+	width:100px;
+}
+
 /*/////////////   Connection/Creation page ///////////////////*/
 
 input[type=text], select {
