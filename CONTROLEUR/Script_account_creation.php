@@ -4,6 +4,7 @@ session_start();
 require('../MODEL/model.php');
 
 $accounts = getAccounts();
+$pseudo_already_exist = false;
 
 if(isset($_POST['pseudo'])) {
 
