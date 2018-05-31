@@ -3,7 +3,7 @@ session_start();
 
 require('../MODEL/model.php');
 
-$accounts = getAccounts();
+$accounts = getAccounts(); //Call all accounts in DataBase
 $pseudo_already_exist = false;
 
 if(isset($_POST['pseudo'])) {
@@ -16,23 +16,23 @@ if(isset($_POST['pseudo'])) {
 	}
 
 	if($pseudo_already_exist) {
-		$erreur = "<div class='alert2'>Ce pseudo existe déja !</div>";
-	}else if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['nom']) && !empty($_POST['prenom'])) {
+		$error = "<div class='alert2'>Ce pseudo existe déja !</div>";
+	}else if(!empty($_POST['pseudo']) && !empty($_POST['pwd']) && !empty($_POST['f_name']) && !empty($_POST['s_name'])) { //Creation account
 
-		if(strlen($_POST['mdp']) < 5) {
-			$erreur = "<div class='alert2'>Votre mot de passe doit au moins contenir 5 caractères !</div>";
+		if(strlen($_POST['pwd']) < 5) {
+			$error = "<div class='alert2'>Votre mot de passe doit au moins contenir 5 caractères !</div>";
 		}else if(strlen($_POST['pseudo']) < 6) {
-				$erreur = "<div class='alert2'>Votre pseudo doit au moins contenir 6 caractères !</div>";
+				$error = "<div class='alert2'>Votre pseudo doit au moins contenir 6 caractères !</div>";
 		}else {
-			createAccount($_POST['nom'],$_POST['prenom'],$_POST['pseudo'],sha1($_POST['mdp']));
+			createAccount($_POST['f_name'],$_POST['s_name'],$_POST['pseudo'],sha1($_POST['pwd']));
 			 header('location:Script_main_page.php');
 			 $_SESSION['pseudo'] = $_POST['pseudo'];
-			 $_SESSION['mdp'] = $_POST['mdp'];
+			 $_SESSION['pwd'] = $_POST['pwd'];
 
-			$erreur = '<br>Your account has been created !';
+			$error = '<br>Votre compte a été créé !';
 		}
 	}else {
-		$erreur = "<div class='alert2'>Merci de remplir tous les champs</div>";
+		$error = "<div class='alert2'>Merci de remplir tous les champs</div>";
 	}
 
 }

@@ -19,17 +19,17 @@
 			</ul>
 	<br><br><br><br><br>
 	    <form action="../CONTROLEUR/search.php" method="get">
-		      <select name="categorie" class="select">
+		      <select name="class" class="select">
 			<option value ="">Catégories</option>
 			<?php include('../CONTROLEUR/Script_main_page_2.php'); ?>
 		      </select>
-		      <select name="sous-categorie" class="select">
+		      <select name="under-class" class="select">
 			<option value ="">Sous-catégories</option>
 			<?php include('../CONTROLEUR/Script_main_page_3.php'); ?>
 		      </select> 
 	      <button class="button">Chercher</button><br><br><br>
 	 
-	    </form> 
+	    </form>
 		</center>
 	    <table>
 	      <?php include('../CONTROLEUR/Script_main_page_1.php'); ?>

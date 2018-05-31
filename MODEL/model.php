@@ -1,6 +1,6 @@
 <?php
 
-function dbConnect() {
+function dbConnect() { //Link to the DataBase
 	try {
 		$bdd = new PDO('mysql:host=localhost;dbname=geek-o-sphere', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		return $bdd;
@@ -10,58 +10,58 @@ function dbConnect() {
 }
 
 
-function getAccounts() {
+function getAccounts() { //Register all accounts
 	$bdd = dbConnect();
 	$accounts = $bdd->query('SELECT * FROM `clients` ');
 	return $accounts;
 }
 
 
-function createAccount($nom,$prenom,$pseudo,$mdp) {
+function createAccount($f_name,$s_name,$pseudo,$pwd) { //Create account
 	$bdd = dbConnect();
-	$requete_inscription = $bdd->prepare('INSERT INTO clients(nom, prenom, pseudo, mdp,idPdls) VALUES (:nom, :prenom, :pseudo, :mdp,1)');
-	$requete_inscription->execute(array(
-		'nom' => $nom,
-		'prenom' => $prenom,
+	$query_sign_up = $bdd->prepare('INSERT INTO clients(nom, prenom, pseudo, mdp,idPdls) VALUES (:f_name, :s_name, :pseudo, :pwd,1)');
+	$query_sign_up->execute(array(
+		'f_name' => $f_name,
+		's_name' => $s_name,
 		'pseudo' => $pseudo,
-		'mdp' => $mdp
+		'pwd' => $pwd
 	));
 }
 
 
-function getArticlesCustom($requete_sql) {
+function getArticlesCustom($query_sql) { //Create query
 	$bdd = dbConnect();
-	$articles = $bdd->query('SELECT * FROM `articles` '.$requete_sql);
+	$articles = $bdd->query('SELECT * FROM `articles` '.$query_sql);
 	return $articles;
 }
 
 
-function getArticles() {
+function getArticles() { //Create query 
 	$bdd = dbConnect();
 	$articles = $bdd->query('SELECT * FROM `articles`');
 	return $articles;
 }
 
 
-function addArticle($categorie, $nom, $description, $image, $quantite, $idMagasins, $prix, $sous_categorie){
+function addArticle($class, $f_name, $description, $image, $amount, $idShop, $price, $under_class){ //Create query
 	$bdd = dbConnect();
-	$articles = $bdd->prepare('INSERT INTO articles(categorie, nom, description, image, quantite, idMagasins, prix, sous_categorie) VALUES (:categorie, :nom, :description, :image, :quantite, :idMagasins, :prix, :sous_categorie)');
+	$articles = $bdd->prepare('INSERT INTO articles(categorie, nom, description, image, quantite, idMagasins, prix, sous_categorie) VALUES (:class, :f_name, :description, :image, :amount, :idShop, :price, :under_class)');
 	$articles->execute(array(
-		'categorie' => $categorie,
-		'nom' => $nom,
+		'class' => $class,
+		'f_name' => $f_name,
 		'description' => $description,
 		'image' => $image,
-		'quantite' => $quantite,
-		'idMagasins' => $idMagasins,
-		'prix' => $prix,
-		'sous_categorie' => $sous_categorie,
+		'amount' => $amount,
+		'idShop' => $idShop,
+		'price' => $price,
+		'under_class' => $under_class,
 	));
 }
 
-function getSelectDistinct($option) {
+function getSelectDistinct($option) { //Create query
 	$bdd= dbConnect();
-	$requete = $bdd->query('SELECT DISTINCT '.$option.' FROM `articles`');
-	return $requete;
+	$query = $bdd->query('SELECT DISTINCT '.$option.' FROM `articles`');
+	return $query;
 
 }
 

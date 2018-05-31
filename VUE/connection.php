@@ -16,7 +16,7 @@
 						echo $_POST['pseudo']; 
 				} ?> >
 				<br>
-				<input type = "password" placeholder="Mot de passe" name ="mdp" id="psw"><br>
+				<input type = "password" placeholder="Mot de passe" name ="pwd" id="psw"><br>
 				<input type = "submit" value = "Se connecter">
 			</form>
 			<a href ="CONTROLEUR/Script_account_creation.php"><button class="button">Créer un compte</button></a>

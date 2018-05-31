@@ -1,9 +1,9 @@
 <?php
 	$option = 'categorie';
-	$requete = getSelectDistinct($option);
-	while ( $donnees = $requete -> fetch()) {
+	$query = getSelectDistinct($option);
+	while ( $data = $query -> fetch()) { //Print SELECT
 
-		echo '<option value="'.$donnees['categorie'].'">'.$donnees['categorie'].'</option>';
+		echo '<option value="'.utf8_encode($data['categorie']).'">'.utf8_encode($data['categorie']).'</option>';
 	
 	}
 ?>
