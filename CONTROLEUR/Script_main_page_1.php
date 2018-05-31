@@ -1,23 +1,21 @@
 <?php
-	require('../MODEL/model.php');
-
-	$a=false;
+	$verif1=false;
 	if (isset($_SESSION['articles']) && $_SESSION['articles'] != '') {
 		$partie_1_requete = ' categorie="'.$_SESSION['articles'].'"';
-		$a=true;
+		$verif1=true;
 	}
 
-	$b=false;
+	$verif2=false;
 	if (isset($_SESSION['categorie']) && $_SESSION['categorie'] != '') {
 		$partie_2_requete = ' sous_categorie="'.$_SESSION['categorie'].'"';
-		$b=true;
+		$verif2=true;
 	}
 	$requete_sql='';
-	if ($a == true && $b == true) {
+	if ($verif1 == true && $verif2 == true) {
 		$requete_sql = 'WHERE ('.$partie_1_requete.' AND '.$partie_2_requete.')';
-	} else if ($a == true && $b == false) {
+	} else if ($verif1 == true && $verif2 == false) {
 		$requete_sql = 'WHERE '.$partie_1_requete;
-	} else if ($a == false && $b == true) {
+	} else if ($verif1 == false && $verif2 == true) {
 		$requete_sql = 'WHERE '.$partie_2_requete;
 	}
 

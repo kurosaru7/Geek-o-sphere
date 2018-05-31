@@ -58,5 +58,10 @@ function addArticle($categorie, $nom, $description, $image, $quantite, $idMagasi
 	));
 }
 
+function getSelectDistinct($option) {
+	$bdd= dbConnect();
+	$requete = $bdd->query('SELECT DISTINCT '.$option.' FROM `articles`');
+	return $requete;
 
+}
 

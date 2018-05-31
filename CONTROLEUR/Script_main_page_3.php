@@ -1,8 +1,6 @@
 <?php
-
-	$bdd = new PDO('mysql:host=localhost;dbname=geek-o-sphere', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-	$requete = $bdd->query('SELECT DISTINCT sous_categorie FROM articles');
+	$option = 'sous_categorie';
+	$requete = getSelectDistinct($option);
 	while ( $donnees = $requete -> fetch()) {
 
 		echo '<option value="'.$donnees['sous_categorie'].'">'.$donnees['sous_categorie'].'</option>';

@@ -1,3 +1,4 @@
+<?php require("../MODEL/model.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
