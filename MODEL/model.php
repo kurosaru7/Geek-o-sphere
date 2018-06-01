@@ -36,32 +36,38 @@ function getArticlesCustom($query_sql) { //Create query
 }
 
 
-function getArticles() { //Create query 
+function getItems() { //Create query 
 	$bdd = dbConnect();
-	$articles = $bdd->query('SELECT * FROM `articles`');
-	return $articles;
+	$items = $bdd->query('SELECT * FROM `articles`');
+	return $items;
+}
+
+function getShops(){
+	$bdd = dbConnect();
+	$shops = $bdd->query('SELECT * FROM `magasins`');
+	return $shops;
 }
 
 
-function addArticle($class, $f_name, $description, $image, $amount, $idShop, $price, $under_class){ //Create query
+function addItem($class, $name, $description, $picture, $quantity, $idShop, $price, $subclass){ //Create query
 	$bdd = dbConnect();
-	$articles = $bdd->prepare('INSERT INTO articles(categorie, nom, description, image, quantite, idMagasins, prix, sous_categorie) VALUES (:class, :f_name, :description, :image, :amount, :idShop, :price, :under_class)');
-	$articles->execute(array(
+	$items = $bdd->prepare('INSERT INTO articles(categorie, nom, description, image, quantite, idMagasins, prix, sous_categorie) VALUES (:class, :name, :description, :picture, :quantity, :idShop, :price, :subclass)');
+	$items->execute(array(
 		'class' => $class,
-		'f_name' => $f_name,
+		'name' => $name,
 		'description' => $description,
-		'image' => $image,
-		'amount' => $amount,
+		'picture' => $picture,
+		'quantity' => $quantity,
 		'idShop' => $idShop,
 		'price' => $price,
-		'under_class' => $under_class,
+		'subclass' => $subclass,
 	));
 }
+
 
 function getSelectDistinct($option) { //Create query
 	$bdd= dbConnect();
 	$query = $bdd->query('SELECT DISTINCT '.$option.' FROM `articles`');
 	return $query;
-
 }
 

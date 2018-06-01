@@ -4,6 +4,5 @@
 	while ( $data = $query -> fetch()) { //Print SELECT
 
 		echo '<option value="'.utf8_encode($data['sous_categorie']).'">'.utf8_encode($data['sous_categorie']).'</option>';
-		
 	}
 ?>
