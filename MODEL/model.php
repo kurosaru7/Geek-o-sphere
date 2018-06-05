@@ -16,6 +16,11 @@ function getAccounts() { //Register all accounts
 	return $accounts;
 }
 
+function getOneAccount($pseudo) { //Register all accounts
+	$bdd = dbConnect();
+	$accounts = $bdd->query('SELECT * FROM `clients` WHERE pseudo="'.$pseudo.'"');
+	return $accounts;
+}
 
 function createAccount($f_name,$s_name,$pseudo,$pwd) { //Create account
 	$bdd = dbConnect();

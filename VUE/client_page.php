@@ -18,6 +18,10 @@
 			   <li style="float:right"><a class="active" href="../CONTROLEUR/Script_main_page_disconnection.php">Déconnexion</a></li>
 			</ul>
 
+			<table>
+	      		<?php include('../CONTROLEUR/Script_client_page_1.php'); ?>
+	    	</table>
+
 
 
 		</center>
