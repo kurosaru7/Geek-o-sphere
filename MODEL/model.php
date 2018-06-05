@@ -17,14 +17,17 @@ function getAccounts() { //Register all accounts
 }
 
 function getOneAccount($pseudo) { //Register all accounts
-	$bdd = dbConnect();
-	$accounts = $bdd->query('SELECT * FROM `clients` WHERE pseudo="'.$pseudo.'"');
-	return $accounts;
+	 
+	  $bdd = dbConnect();	   
+	    $accounts = $bdd->query('SELECT * FROM `clients` WHERE pseudo="'.$pseudo.'"');	  
+	    return $accounts;
+	     
 }
+ 
 
 function createAccount($f_name,$s_name,$pseudo,$pwd) { //Create account
 	$bdd = dbConnect();
-	$query_sign_up = $bdd->prepare('INSERT INTO clients(nom, prenom, pseudo, mdp,idPdls) VALUES (:f_name, :s_name, :pseudo, :pwd,1)');
+	$query_sign_up = $bdd->prepare('INSERT INTO clients(nom, prenom, pseudo, mdp,idPdls,credit) VALUES (:f_name, :s_name, :pseudo, :pwd,1,0)');
 	$query_sign_up->execute(array(
 		'f_name' => $f_name,
 		's_name' => $s_name,
