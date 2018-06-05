@@ -6,7 +6,7 @@
 				<th> Prénom
 				<th> Pseudo 
 				<th> Crédit
-				<th> ID PdL		
+				<th> ID PdL 		
 			</tr> 
 	');
 
