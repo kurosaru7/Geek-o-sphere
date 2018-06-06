@@ -19,16 +19,23 @@
 			</ul>
 	<br><br><br><br><br>
 	    <form action="../CONTROLEUR/search.php" method="get">
-		      <select name="class" class="select">
-			<option value ="">Catégories</option>
-			<?php include('../CONTROLEUR/Script_main_page_2.php'); ?>
-		      </select>
-		      <select name="under-class" class="select">
-			<option value ="">Sous-catégories</option>
-			<?php include('../CONTROLEUR/Script_main_page_3.php'); ?>
-		      </select> 
-	      <button class="button">Chercher</button><br><br><br>
-	 
+	    	<input type="text" name="chain">
+		    <select name="class" class="select">
+				<option value ="">Catégories</option>
+				<?php include('../CONTROLEUR/Script_main_page_2.php'); ?>
+		    </select>
+		    <select name="under-class" class="select">
+				<option value ="">Sous-catégories</option>
+				<?php include('../CONTROLEUR/Script_main_page_3.php'); ?>
+		    </select>
+		    <select name="order" class="select">
+		    	<option value ="">Trier par</option>
+		    	<option value ="prix">Prix (Croissant)</option>
+		    	<option value ="prix DESC">Prix (Décroissant)</option>
+		    	<option value ="quantite">Quantité (Croissant)</option>
+		    	<option value ="quantite DESC">Quantité (Décroissant)</option>
+		    </select>
+	      	<button class="button">Chercher</button><br><br><br>
 	    </form>
 		</center>
 	    <table>
