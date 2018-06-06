@@ -43,6 +43,13 @@ function getArticlesCustom($query_sql) { //Create query
 	return $articles;
 }
 
+function getShopName($idPdLs){
+	$bdd = dbConnect();
+	$shop_name = $bdd->prepare('SELECT `nom` FROM `points_de_livraison` WHERE idPdLs = ? ');
+	$shop_name->execute(array($idPdLs));
+	return $shop_name;
+}
+
 
 function getItems() { //Create query 
 	$bdd = dbConnect();
