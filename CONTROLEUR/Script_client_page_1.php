@@ -1,27 +1,16 @@
 <?php
 
-	print ('<tr>
-				<th> ID 
-				<th> Nom
-				<th> Prénom
-				<th> Pseudo 
-				<th> Crédit
-				<th> ID PdL 		
-			</tr> 
-	');
+	$account = getOneAccount($_SESSION['pseudo']);
 
-	$articles = getOneAccount($_SESSION['pseudo']);
-	while ( $data = $articles -> fetch()) { 							 //Print all lignes of the table
-
-		print ('<tr>
-				<td>'.utf8_encode($data['idClients']).'
-				<td>'.utf8_encode($data['nom']).'
-				<td>'.utf8_encode($data['prenom']).'
-				<td>'.utf8_encode($data['pseudo']).'
-				<td>'.utf8_encode($data['credit']).'
-				<td>'.utf8_encode($data['idPdLs'])
-		);
-
-	}
-
+	//Print all lignes of the table
+	$data = $account -> fetch();
+	
+	$data2 = getShopName($data['idPdLs']);
+	$shop_name = $data2 -> fetch();
+	echo '<tr><th>Nom</th><th> '.utf8_encode($data['nom']).'</th></tr>';
+	echo '<tr><th>Prenom</th><th> '.utf8_encode($data['prenom']).'</th></tr>';
+	echo '<tr><th>Pseudo</th><th> '.utf8_encode($data['pseudo']).'</th></tr>';
+	echo '<tr><th>Crédit</th><th> '.utf8_encode($data['credit']).'</th></tr>';
+	echo '<tr><th>Point de livraison</th><th> '.$shop_name[0].'</th></tr>';
+	
 ?>
