@@ -35,12 +35,11 @@
 	}
 
 	print ('<tr>
-			<th> Categorie 
-			<th> Sous-Categorie
+			<th> Catégorie 
+			<th> Sous-Catégorie
 			<th> Nom
 			<th> Quantité 
-			<th> Prix 
-			<th colspan="2">Commander			
+			<th colspan="3"> Prix 
 		</tr> 
 	');
 
@@ -85,12 +84,9 @@
 					<td>'.utf8_encode($data['nom']).'
 					<td>'.utf8_encode($data['quantite']).'
 					<td>'.utf8_encode($data['prix']).'€
-					<td><select class="stock">');
-				for ($i=0; $i < $data['quantite']; $i++) { 
-					print('<option selected="stock">'.($i+1).'</option>');
-				}
+				');
 			print ('    </select>
-					<td><button>Panier</button>'
+					<td><a href="Script_detail_article.php?id='.$data['idArticles'].'"><button>...</button></a>'
 			);
 		}
 	}

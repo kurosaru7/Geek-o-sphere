@@ -106,11 +106,6 @@ input[type=submit]:hover {
 	background-color: #45a049;
 }
 
-div {
-	border-radius: 5px;
-	padding: 20px;
-	margin-top :-100px;
-}
 
 .account {
 	border-radius: 5px;
@@ -164,4 +159,40 @@ div {
 	padding: 10px;
 	background-color: #f44336;
 	color: white;
+}
+
+
+/* /////////////////////// Detailed page of the article //////////////////// */
+
+
+.categorie {
+	margin-top:-190px;
+	margin-left:-1400px;
+}
+
+.sous_categorie {
+	margin-top:-18px;
+	margin-left:-1100px;
+}
+
+.nom_article {
+	margin-top:60px;
+	text-size:1000px;
+}
+
+
+
+.prix {
+	margin-left:1180px;
+	margin-top:-15px;
+}
+
+.quantite {
+	margin-top:150px;
+	margin-left:1125px;
+}
+
+
+.description {
+	margin-top:300px;
 }
