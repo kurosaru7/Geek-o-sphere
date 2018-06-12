@@ -45,6 +45,7 @@
 
 	$test = false;
 	$articles = getArticlesCustom($query_sql);
+	$test_recherche = false;
 	while ( $data = $articles -> fetch()) { //Print all lignes of the table
 
 		$temp = explode(" ", $data['nom']);
@@ -77,7 +78,7 @@
 		}
 
 		if ($test == true || isset($_SESSION['chain']) == false || $_SESSION['chain'] == "") {
-
+			$test_recherche = true;
 			print ('<tr>
 					<td>'.utf8_encode($data['categorie']).'
 					<td>'.utf8_encode($data['sous_categorie']).'
@@ -89,6 +90,9 @@
 					<td><a href="Script_detail_article.php?id='.$data['idArticles'].'"><button>...</button></a>'
 			);
 		}
+	}
+	if ($test_recherche == false) {
+		print('<tr><td><td><td colspan="4">Aucun article ne correspond à votre recherche.</td>');
 	}
 
 ?>

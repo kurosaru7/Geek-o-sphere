@@ -145,7 +145,7 @@ input[type=submit]:hover {
 .alert {
 	width:200px;
 	height:20px;
-	margin-top:50px;
+	margin-top:-30px;
 	padding: 10px;
 	background-color: #f44336;
 	color: white;
