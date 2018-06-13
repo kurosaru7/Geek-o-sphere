@@ -86,3 +86,18 @@ function getSelectDistinct($option) { //Create query
 	return $query;
 }
 
+function getHisto() {
+	$bdd= dbConnect();
+	$query = $bdd->query('SELECT * FROM achats WHERE idClients="'.$_SESSION['id'].'"');
+}
+
+function updateClient($name, $surname, $pseudo, $pdl) {
+	$bdd= dbConnect();
+	$items = $bdd->prepare('UPDATE clients SET nom=:name, prenom=:surname, pseudo=:pseudo, idPdLs=:pdl)');
+	$items->execute(array(
+		'name' => $name,
+		'surname' => $surname,
+		'pseudo' => $pseudo,
+		'pdl' => $pdl
+	));
+}

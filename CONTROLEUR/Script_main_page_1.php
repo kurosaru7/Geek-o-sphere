@@ -76,7 +76,6 @@
 				}
 			} 
 		}
-
 		if ($test == true || isset($_SESSION['chain']) == false || $_SESSION['chain'] == "") {
 			$test_recherche = true;
 			print ('<tr>
