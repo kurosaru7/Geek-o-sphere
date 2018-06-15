@@ -17,14 +17,14 @@
 			   <li style="float:right"><a class="active" href="../CONTROLEUR/Script_main_page_disconnection.php">Déconnexion</a></li>
 			</ul>
 			<table>
-	      		<?php include('../CONTROLEUR/Script_client_page_1.php'); ?>
+	      		<?php include('../CONTROLEUR/Script_modif_client_1.php'); ?>
 	      	</table>
 		</center>
 		<br>
-		<a href="./Script_historique.php">
-			<button class="button">Voir l'Historique</button>
-		</a><a href="./Script_modif_client.php">
-			<button class="right">Changer ses Coordonnées</button>
+		<a href="./Script_client_page.php">
+			<button class="button">Annuler</button>
+		</a><a href="./Script_modif.php">
+			<button class="right">Sauvegarder</button>
 		</a>
 	</body>
 </html>
