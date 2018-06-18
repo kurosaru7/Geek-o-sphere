@@ -8,7 +8,6 @@
 </head>
 <body><br>
 		<center>
-			<img src="../VUE/logo.png" class ="image" />
 			<ul>
 			   <li><a href="./Script_main_page.php">Accueil</a></li>
 			   <li><a href="./Script_client_page.php"><?php echo $_SESSION['pseudo'] ?></a></li>
@@ -18,7 +17,7 @@
 			</ul>
 
 
-			
+
 		</center>
 	</body>
 </html>
