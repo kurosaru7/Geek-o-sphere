@@ -81,6 +81,17 @@ input[type=text] {
 	box-sizing: border-box;
 }
 
+input[type=number] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	-moz-appearance: textfield;
+  	appearance: textfield;
+}
+
 input[type=password] {
 	width: 30%;
 	padding: 12px 20px;
@@ -170,7 +181,6 @@ input[type=submit]:hover {
 .image {
 	width:400px;
 	height:400px;
-	margin-top: 50px;
 } 
 
 
@@ -195,6 +205,12 @@ input[type=submit]:hover {
 
 .text_p {
 	color: #0a6d02;
+	font-style: italic;
+	font-family: "Comic Sans MS";
+}
+
+.text_p2 {
+	color: #b93200;
 	font-style: italic;
 	font-family: "Comic Sans MS";
 }

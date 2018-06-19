@@ -16,18 +16,16 @@
 		<br><br><br>
 		<br><br><br>
 		<br><br><br>
-		Compteur : 
-		<select name="sign">
-			<option value="+">+</option>
-			<option value="-">-</option>
-		</select>
-		<select>
-			<?php
-			for ($i=1; $i < 1001; $i=$i) { 
-				echo '<option value="'.$i.'">'.$i.'</option>';
-			}
-			?>
-		</select>
+		<form action="./test.php" method="get">
+			<div class="text_p2">Compteur : 
+			<select name="sign">
+				<option value="+">+</option>
+				<option value="-">-</option>
+			</select>
+			<input type="number" name="number" required>
+			<button class="button">OK</button>
+		</div>
+		</form>
 
 	</center>
 	</body>
