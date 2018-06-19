@@ -9,22 +9,16 @@
 <body><br>
 		<center>
 		<img src="../VUE/logo.png" class ="image" />
-			<ul>
-			   <li><a href="./Script_main_page.php">Accueil</a></li>
-			   <li><a href="./Script_client_page.php"><?php echo $_SESSION['pseudo'] ?></a></li>
-			   <li><a href="#">Panier</a></li>
-			   <li><a href="#"><?php include("./Script_nav_1.php"); ?></a></li>
-			   <li style="float:right"><a class="active" href="../CONTROLEUR/Script_main_page_disconnection.php">Déconnexion</a></li>
-			</ul>
-	    <form action="../CONTROLEUR/search.php" method="get">
+			<?php include('./Nav_barre.php'); ?>
+	    <form action="./search.php" method="get">
 	    	<input type="text" name="chain">
 		    <select name="class" class="select">
 				<option value ="">Catégories</option>
-				<?php include('../CONTROLEUR/Script_main_page_2.php'); ?>
+				<?php include('./Script_main_page_2.php'); ?>
 		    </select>
 		    <select name="under-class" class="select">
 				<option value ="">Sous-catégories</option>
-				<?php include('../CONTROLEUR/Script_main_page_3.php'); ?>
+				<?php include('./Script_main_page_3.php'); ?>
 		    </select>
 		    <select name="order" class="select">
 		    	<option value ="">Trier par</option>
@@ -37,7 +31,7 @@
 	    </form>
 		</center>
 	    <table>
-	      <?php include('../CONTROLEUR/Script_main_page_1.php'); ?>
+	      <?php include('./Script_main_page_1.php'); ?>
 	    </table>
 		
 </body>

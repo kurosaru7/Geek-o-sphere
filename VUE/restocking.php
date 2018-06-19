@@ -6,10 +6,10 @@
 	</head>
 	<body>
 		<h1>Choisir le produit à réapprovisionner</h1><br>
-		<form action ="../CONTROLEUR/Script_add_stock.php" method="POST">
+		<form action ="./Script_add_stock.php" method="POST">
 			<table>
 				<tr><th>Nom de l'article</th><th>Stock actuel</th><th>Ajouter</th></tr>
-			<?php include ('../CONTROLEUR/Script_print_products.php'); ?> 
+			<?php include ('./Script_print_products.php'); ?> 
 	</table>
 	<input type="submit" name="add" value="Ajouter">
 	</form>

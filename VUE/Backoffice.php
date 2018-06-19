@@ -14,14 +14,14 @@
 				echo "<h2 style='color: Red'>Tous les champs ne sont pas remplis!</h2>";
 			}
 			}	?>
-	<form action ="../CONTROLEUR/Script_add_items.php" name="add_item" method="POST">
+	<form action ="./Script_add_items.php" name="add_item" method="POST">
 	Catégorie :<select name="class">
 		<option selected="">
-		<?php include('../CONTROLEUR/Script_option_backoffice.php');	?>
+		<?php include('./Script_option_backoffice.php');	?>
 	</select><br>
 	Sous-Catégorie: <select name="subclass">
 	<option selected value=""></option>
-		<?php include('../CONTROLEUR/Script_main_page_3.php');	?>
+		<?php include('./Script_main_page_3.php');	?>
 	<option value="Hardware">Hardware</option>
 	</select><br>
 	Nom: <input type="text" name="name"><br>
@@ -31,7 +31,7 @@
 	Prix: <input type="number" step="0.01" name="price">€<br>
 	Magasin: <select name="idShop">
 	<option selected="">
-		<?php include ('../CONTROLEUR/Script_shop_backoffice.php'); ?>
+		<?php include ('./Script_shop_backoffice.php'); ?>
 	</select><br>
 	<input type="submit" name="go" value="Ajouter">
 	</form>

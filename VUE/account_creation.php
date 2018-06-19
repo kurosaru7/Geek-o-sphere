@@ -9,7 +9,7 @@
 
 		<div class="account">
 			<img src="../VUE/logo.png" class="image">
-			<form action ="../CONTROLEUR/Script_account_creation.php" method="POST">
+			<form action ="./Script_account_creation.php" method="POST">
 				<input type = "text" placeholder ="Nom" name = "f_name" value = <?php
 				if(isset($_POST['f_name'])) { 
 					echo $_POST['f_name']; 
