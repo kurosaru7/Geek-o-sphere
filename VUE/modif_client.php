@@ -15,10 +15,13 @@
 	      	</table>
 		</center>
 		<br>
-		<a href="./Script_client_page.php">
-			<button class="button">Annuler</button>
-		</a><a href="./Script_modif.php">
-			<button class="right">Sauvegarder</button>
-		</a>
+  		<a href="./Script_client_page.php">
+  			<button class="button">Annuler</button>
+        
+    <div class ="test">    
+  		</a><a href="./Script_modif.php">
+  			<button class="change">Sauvegarder</button>
+  		</a>
+  </div>
 	</body>
 </html>

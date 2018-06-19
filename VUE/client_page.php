@@ -15,10 +15,16 @@
 	      	</table>
 		</center>
 		<br>
+
 		<a href="./Script_historique.php">
 			<button class="button">Voir l'Historique</button>
-		</a><a href="./Script_modif_client.php">
-			<button class="right">Changer ses Coordonnées</button>
 		</a>
+
+    <div class="test">
+    <a  href="./Script_modif_client.php">
+			<button class="change">Changer ses Coordonnées</button>
+    </a>
+  </div>
+
 	</body>
 </html>
