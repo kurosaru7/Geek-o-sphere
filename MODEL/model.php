@@ -93,11 +93,19 @@ function getHisto() {
 
 function updateClient($name, $surname, $pseudo, $pdl) {
 	$bdd= dbConnect();
-	$items = $bdd->prepare('UPDATE clients SET nom=:name, prenom=:surname, pseudo=:pseudo, idPdLs=:pdl)');
+	$items = $bdd->prepare('UPDATE clients SET nom=:name, prenom=:surname, pseudo=:pseudo, idPdLs=:pdl');
 	$items->execute(array(
 		'name' => $name,
 		'surname' => $surname,
 		'pseudo' => $pseudo,
 		'pdl' => $pdl
+	));
+}
+
+function updateCredit($credit) {
+	$bdd= dbConnect();
+	$items = $bdd->prepare('UPDATE clients SET credit=:credit WHERE pseudo="'.$_SESSION['pseudo'].'"');
+	$items->execute(array(
+		'credit' => $credit
 	));
 }

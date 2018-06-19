@@ -12,20 +12,27 @@
 		<br><br><br>
 		<br><br><br>
 		<br><br><br>
+
 		<?php include('./Script_credit_page_1.php'); ?>
+
 		<br><br><br>
 		<br><br><br>
+
+		<?php include('./Script_credit_page_2.php'); ?>
+
 		<br><br><br>
-		<form action="./test.php" method="get">
-			<div class="text_p2">Compteur : 
+
+		<form action="./Change_credit.php" method="get">
+			<div class="text_p2">Montant : 
 			<select name="sign">
 				<option value="+">+</option>
 				<option value="-">-</option>
 			</select>
-			<input type="number" name="number" required>
+			<input type="number" name="number" step=0.01 required>
 			<button class="button">OK</button>
 		</div>
-		</form>
+		</form><br>
+		<div class="text_p3">Maximum : 100 000,00 € / Minimum : 0 €</div>
 
 	</center>
 	</body>
