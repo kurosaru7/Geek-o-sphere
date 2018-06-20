@@ -10,7 +10,9 @@
 		<center>
 			<?php include('./navigation_bar.php'); ?>
 
+			<br><br><br>
 
+			<?php include('./history_1.php'); ?>
 
 		</center>
 	</body>
