@@ -2,7 +2,6 @@
 session_start();
 
 if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) {
-  require("../MODEL/model.php");
   $query = 'WHERE `idArticles` ='.$_GET['id'];
   $item = getArticlesCustom($query);
 
