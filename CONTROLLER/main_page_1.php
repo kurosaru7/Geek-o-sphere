@@ -17,7 +17,7 @@
 		$verif3=true;
 	}
 
-	$query_sql=''; 
+	$query_sql='';
 	if ($verif1 == true && $verif2 == true && $verif3 == false) {							 //Create the query with SELECTs
 		$query_sql = 'WHERE ('.$part_1_query.' AND '.$part_2_query.' AND quantite!="0")'; 
 	} else if ($verif1 == true  && $verif2 == false && $verif3 == false) {
@@ -35,12 +35,12 @@
 	}
 
 	print ('<tr>
-			<th> Catégorie 
+			<th> Catégorie
 			<th> Sous-Catégorie
 			<th> Nom
-			<th> Quantité 
-			<th colspan="3"> Prix 
-		</tr> 
+			<th> Quantité
+			<th colspan="3"> Prix
+		</tr>
 	');
 
 	$test = false;
@@ -62,19 +62,19 @@
 						}
 					}
 				} if ($test == false) {
-					for ($j=0; $j < sizeof($temp2); $j++) { 
+					for ($j=0; $j < sizeof($temp2); $j++) {
 						if (strtolower($_SESSION['chain'][$i]) == strtolower(utf8_encode($temp2[$j]))) {
 							$test = true;
 						}
 					}
 				} if ($test == false) {
-					for ($j=0; $j < sizeof($temp3); $j++) { 
+					for ($j=0; $j < sizeof($temp3); $j++) {
 						if (strtolower($_SESSION['chain'][$i]) == strtolower(utf8_encode($temp3[$j]))) {
 							$test = true;
 						}
 					}
 				}
-			} 
+			}
 		}
 		if ($test == true || isset($_SESSION['chain']) == false || $_SESSION['chain'] == "") {
 			$test_recherche = true;
@@ -86,7 +86,7 @@
 					<td>'.utf8_encode($data['prix']).'€
 				');
 			print ('    </select>
-					<td><a href="Script_detail_article.php?id='.$data['idArticles'].'"><button>...</button></a>'
+					<td><a href="detailed_item.php?id='.$data['idArticles'].'"><button>...</button></a>'
 			);
 		}
 	}
