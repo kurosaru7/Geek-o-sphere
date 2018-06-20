@@ -10,28 +10,28 @@
 	<center>
 
 	<div class="nom_article">
-	<? echo $nom; ?>
+	<?php echo $nom; ?>
 	</div>
 
 
 	<div class="quantite">
-	<? echo $quantite.' en stock'; ?>
+	<?php echo $quantite.' en stock'; ?>
 	</div>
 
 	<div class="categorie">
-	<? echo $categorie; ?>
+	<?php echo $categorie; ?>
 	</div>
 
 	<div class="sous_categorie">
-	<? echo $sous_categorie; ?>
+	<?php echo $sous_categorie; ?>
 	</div>
 
 	<div class="prix">
-	<? echo $prix.' €'; ?>
+	<?php echo $prix.' €'; ?>
 	</div>
 
 	<div class="description">
-	<? echo $description; ?>
+	<?php echo $description; ?>
 	</div>
 
 	</center>
