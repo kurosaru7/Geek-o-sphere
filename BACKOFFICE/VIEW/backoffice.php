@@ -7,9 +7,6 @@
 <body>
 	<h1>Back Office</h1>
 	<h3>Ajout de produits en vente</h3>
-	<?php 
-	echo $_POST[$ok];
-	?>
 	<form action ="../CONTROLLER/add_items.php" name="add_item" method="POST">
 	Catégorie :<select name="class">
 		<option selected="">

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require('../MODEL/model.php');
+require('../../MODEL/model.php');
 
 if(!empty($_POST['name']) && !empty($_POST['description']) && !empty($_POST['picture']) && !empty(is_numeric($_POST['quantity'])) && !empty(is_numeric($_POST['price'])) && ($_POST['class'] !== "") && ($_POST['subclass'] !== "") && ($_POST['idShop'] !== "")) {
 
