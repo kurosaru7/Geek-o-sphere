@@ -19,19 +19,19 @@
 
 	$query_sql=''; 
 	if ($verif1 == true && $verif2 == true && $verif3 == false) {							 //Create the query with SELECTs
-		$query_sql = 'WHERE ('.$part_1_query.' AND '.$part_2_query.')'; 
+		$query_sql = 'WHERE ('.$part_1_query.' AND '.$part_2_query.' AND quantite!="0")'; 
 	} else if ($verif1 == true  && $verif2 == false && $verif3 == false) {
-		$query_sql = 'WHERE '.$part_1_query;
+		$query_sql = 'WHERE ('.$part_1_query.' AND quantite!="0")';
 	} else if ($verif1 == false && $verif2 == true  && $verif3 == false) {
-		$query_sql = 'WHERE '.$part_2_query;
+		$query_sql = 'WHERE ('.$part_2_query.' AND quantite!="0")';
 	} else if ($verif1 == true  && $verif2 == true  && $verif3 == true) {
-		$query_sql = 'WHERE ('.$part_1_query.' AND '.$part_2_query.')'.$part_3_query; 
+		$query_sql = 'WHERE ('.$part_1_query.' AND '.$part_2_query.' AND quantite!="0")'.$part_3_query; 
 	} else if ($verif1 == true  && $verif2 == false && $verif3 == true) {
-		$query_sql = 'WHERE '.$part_1_query.$part_3_query;
+		$query_sql = 'WHERE ('.$part_1_query.' AND quantite!="0") '.$part_3_query;
 	} else if ($verif1 == false && $verif2 == true  && $verif3 == true) {
-		$query_sql = 'WHERE '.$part_2_query.$part_3_query;
+		$query_sql = 'WHERE ('.$part_2_query.' AND quantite!="0") '.$part_3_query;
 	} else if ($verif1 == false && $verif2 == false  && $verif3 == true) {
-		$query_sql = $part_3_query;
+		$query_sql = 'WHERE quantite!="0" '.$part_3_query;
 	}
 
 	print ('<tr>
