@@ -98,6 +98,7 @@ CREATE TABLE IF NOT EXISTS `geek-o-sphere`.`achats` (
 	  `time` TIME NULL,
 	  `idClients` INT(3) NOT NULL,
 	  `idArticles` INT(3) NOT NULL,
+	  `quantite` INT(5) NOT NULL,
 	  PRIMARY KEY (`idAchats`, `idClients`, `idArticles`),
 	  INDEX `fk_achats_clients1_idx` (`idClients` ASC),
 	  INDEX `fk_achats_articles1_idx` (`idArticles` ASC),
@@ -197,11 +198,11 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `geek-o-sphere`;
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`) VALUES (1, 'En cours', '2018/05/16', '13:04', 4, 3);
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`) VALUES (2, 'Livré', '2018/05/03', '19:14', 3, 4);
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`) VALUES (3, 'En cours', '2018/05/09', '07:45', 2, 5);
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`) VALUES (4, 'Panier', '2018/04/30', '15:34', 5, 3);
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`) VALUES (5, 'En cours', '2018/05/22', '14:40', 1, 2);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (1, 'En cours', '2018/05/16', '13:04', 4, 3, 1);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (2, 'Livré', '2018/05/03', '19:14', 3, 4, 2);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (3, 'En cours', '2018/05/09', '07:45', 2, 5, 3);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (4, 'Panier', '2018/04/30', '15:34', 5, 3, 4);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (5, 'En cours', '2018/05/22', '14:40', 1, 2, 5);
 
 COMMIT;
 

@@ -114,11 +114,13 @@ function historyCall() {
 	$bdd = dbConnect();
 	$items = $bdd->query('SELECT  `achats`.date AS "achats.date", `achats`.time AS "achats.time",
 									`achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients", 
+									`achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite", 
 									`clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo", 
 									`articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom" 
 							FROM    achats, clients, articles 
 							WHERE ( `achats`.idArticles=`articles`.idArticles 
 							        AND `clients`.idClients=`achats`.idClients 
+							        AND `achats`.etat!="Panier" 
 									AND `clients`.pseudo="'.$_SESSION['pseudo'].'"
 								)'
 						  ); 
