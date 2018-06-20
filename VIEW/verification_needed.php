@@ -2,11 +2,11 @@
 	<head>
 		<title>Connectez vous</title>
 		<meta charset='utf-8'>
-		<link rel="stylesheet" href="../VUE/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="../VIEW/style.css" type="text/css" media="all" />
 	</head>
 	<body>
 	<center>
-	<img src="../VUE/logo.png" class ="image" />
+	<img src="../VIEW/logo.png" class ="image" />
 	<br>
 	Vous devez être connécté pour accéder à cette page.
 	<br><br><br>

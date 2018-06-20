@@ -10,7 +10,7 @@ while($data = $accounts->fetch()) {
   if(!empty($_POST['pseudo']) || !empty($_POST['pwd'])){ 
  
     if($_POST['pseudo'] == $data['pseudo'] && sha1($_POST['pwd']) == $data['mdp']) { 
-      header('location:CONTROLEUR/Script_main_page.php'); 
+      header('location:CONTROLLER/main_page.php'); 
       $_SESSION['pseudo'] = $_POST['pseudo']; 
       $_SESSION['pwd'] = $_POST['pwd']; 
     }else { 
@@ -20,5 +20,5 @@ while($data = $accounts->fetch()) {
  
   } 
 } 
-require('VUE/connection.php'); 
+require('VIEW/connection.php'); 
 ?>

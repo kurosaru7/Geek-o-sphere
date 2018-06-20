@@ -2,27 +2,27 @@
 <html>
 	<head>
 	<title>Page Credit</title>
-	<link rel="stylesheet" href="../VUE/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../VIEW/style.css" type="text/css" media="all" />
 	</head>
 
 	<body>
-	<?php include('./Nav_barre.php'); ?>
+	<?php include('./navigation_bar.php'); ?>
 	<center>
 
 		<br><br><br>
 		<br><br><br>
 		<br><br><br>
-
-		<?php include('./Script_credit_page_1.php'); ?>
-
-		<br><br><br>
-		<br><br><br>
-
-		<?php include('./Script_credit_page_2.php'); ?>
+		
+		<?php include('./wallet_1.php'); ?>
 
 		<br><br><br>
+		<br><br><br>
 
-		<form action="./Change_credit.php" method="get">
+		<?php include('./wallet_2.php'); ?>
+
+		<br><br><br>
+
+		<form action="./change_credit.php" method="get">
 			<div class="text_p2">Montant : 
 			<select name="sign">
 				<option value="+">+</option>

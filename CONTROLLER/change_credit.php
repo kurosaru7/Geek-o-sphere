@@ -17,11 +17,11 @@
 
 	if ($n_credit > 100000 || $n_credit < 0 || $_GET['number'] < 1) {
 
-		header('location: Script_credit_page.php?error=true');
+		header('location: wallet.php?error=true');
 
 	} else {
 
 		updateCredit($n_credit);
-		header('location: Script_credit_page.php');
+		header('location: wallet.php');
 	}
 ?>

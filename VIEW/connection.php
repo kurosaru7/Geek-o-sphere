@@ -3,11 +3,11 @@
 	<head>
 		<title>Page de connexion</title>
 		<meta charset = "UTF-8">
-		<link rel="stylesheet" href="VUE/style.css" />
+		<link rel="stylesheet" href="VIEW/style.css" />
 	</head>
 	<body>
 		<center>
-		<img src="VUE/logo.png" class ="image" />
+		<img src="VIEW/logo.png" class ="image" />
 		<?php echo $not_valid_info ?>
 		<div>
 			<form action ="index.php" method ="POST">
@@ -19,7 +19,7 @@
 				<input type = "password" placeholder="Mot de passe" name ="pwd" id="psw"><br>
 				<input type = "submit" value = "Se connecter">
 			</form>
-			<a href ="CONTROLEUR/Script_account_creation.php"><button class="button">Créer un compte</button></a>
+			<a href ="CONTROLLER/account_creation.php"><button class="button">Créer un compte</button></a>
 		</div>
 		</center>
 	</body>

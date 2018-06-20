@@ -2,9 +2,9 @@
 session_start();
 
 if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) { //Securise connection
-	include('../VUE/modif_client.php');
+	include('../VIEW/history.php');
 }else {
-	include('../VUE/authentification_requise.php');
+	include('../VIEW/authentification_requise.php');
 }
 
 ?>

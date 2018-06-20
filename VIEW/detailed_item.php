@@ -2,11 +2,11 @@
 <html>
 	<head>
 	<title>Page Article</title>
-	<link rel="stylesheet" href="../VUE/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../VIEW/style.css" type="text/css" media="all" />
 	</head>
 
 	<body>
-	<?php include('./Nav_barre.php'); ?>
+	<?php include('./navigation_bar.php'); ?>
 
 	<center>
 

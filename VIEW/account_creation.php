@@ -2,14 +2,14 @@
 	<head>
 		<title>Création d'un compte</title>
 		<meta charset = "UTF-8">
-		<link rel="stylesheet" href="../VUE/style.css" />
+		<link rel="stylesheet" href="../VIEW/style.css" />
 	</head>
 	<body>
 		<center>
 
 		<div class="account">
-			<img src="../VUE/logo.png" class="image">
-			<form action ="./Script_account_creation.php" method="POST">
+			<img src="../VIEW/logo.png" class="image">
+			<form action ="./account_creation.php" method="POST">
 				<input type = "text" placeholder ="Nom" name = "f_name" value = <?php
 				if(isset($_POST['f_name'])) { 
 					echo $_POST['f_name']; 

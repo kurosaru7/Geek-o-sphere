@@ -9,6 +9,6 @@
 		$_SESSION['chain'] = "";
 	}
 	$_SESSION['order'] = $_GET['order'];
-	header('location: ../CONTROLEUR/Script_main_page.php');
+	header('location: ../CONTROLLER/main_page.php');
 
 ?>

@@ -25,7 +25,7 @@ if(isset($_POST['pseudo'])) {
 				$error = "<div class='alert2'>Votre pseudo doit au moins contenir 6 caractères !</div>";
 		}else {
 			createAccount($_POST['f_name'],$_POST['s_name'],$_POST['pseudo'],sha1($_POST['pwd']));
-			 header('location:Script_main_page.php');
+			 header('location:main_page.php');
 			 $_SESSION['pseudo'] = $_POST['pseudo'];
 			 $_SESSION['pwd'] = $_POST['pwd'];
 
@@ -36,6 +36,6 @@ if(isset($_POST['pseudo'])) {
 	}
 
 }
-require('../VUE/account_creation.php');
+require('../VIEW/account_creation.php');
 
 ?>
