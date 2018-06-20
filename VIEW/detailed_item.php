@@ -1,4 +1,3 @@
-<?php require("../MODEL/model.php"); ?>
 <html>
 	<head>
 	<title>Page Article</title>
@@ -13,7 +12,7 @@
 	<div class="nom_article">
 	<? echo $nom; ?>
 	</div>
-	
+
 
 	<div class="quantite">
 	<? echo $quantite.' en stock'; ?>

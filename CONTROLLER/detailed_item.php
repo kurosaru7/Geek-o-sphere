@@ -1,4 +1,5 @@
 <?php
+require("../MODEL/model.php");
 session_start();
 
 if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) {
