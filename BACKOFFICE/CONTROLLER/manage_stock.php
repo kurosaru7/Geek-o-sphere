@@ -14,5 +14,4 @@ while ($line = $items->fetch()) {
 updateStock($new_stock);
 header('location: ../VIEW/restocking.php');
 
-
 ?>

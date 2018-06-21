@@ -10,7 +10,7 @@
 
 	<h3>Choisissez l'action que vous souhaitez effectuer</h3>
 
-	<a href="backoffice.php"><button>Ajouter un article en vente</button></a><br>
+	<a href="VIEW/add_item.php"><button>Ajouter un article en vente</button></a><br>
 	<a href="VIEW/restocking.php"><button>Réapprovisionner les stocks</button></a><br>
 	<a href=""><button>Retirer un article de la vente</button></a><br>
 	<a href=""><button>Gêrer les comptes clients</button></a><br>
