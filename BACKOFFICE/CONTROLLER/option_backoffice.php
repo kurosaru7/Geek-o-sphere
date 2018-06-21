@@ -1,6 +1,5 @@
 <?php
 
-	require('../MODEL/model.php');
 	$option = 'categorie';
 	$query = getSelectDistinct($option);
 	while ( $data = $query -> fetch()) { //Print SELECT

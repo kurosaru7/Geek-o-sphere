@@ -15,5 +15,12 @@
 			<?php include('./history_1.php'); ?>
 
 		</center>
+
+		<br><br>
+
+		<a href="./customer_page.php">
+            <button class="button">Retour à la page Client</button>
+        </a>
+
 	</body>
 </html>

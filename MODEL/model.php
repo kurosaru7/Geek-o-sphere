@@ -154,10 +154,19 @@ function basketCall() {
   return $items;
 }
 
-function updateStock($new_stock) {
+function updateStock($new_stock, $id) {
   $bdd= dbConnect();
-  $items = $bdd->prepare('UPDATE articles SET quantite=:stock');
+  $items = $bdd->prepare('UPDATE articles SET quantite=:stock WHERE idArticles=:id');
   $items->execute(array(
-    'stock' => $new_stock
+    'stock' => $new_stock,
+    'id' => $id
   ));
 }
+
+function supprItem($id) {
+  $bdd= dbConnect();
+  $items = $bdd->prepare('UPDATE articles SET quantite="0" WHERE idArticles=:id');
+  $items->execute(array('id' => $id));
+}
+
+?>

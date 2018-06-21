@@ -29,6 +29,6 @@
 		echo"<tr><td><td><td colspan=3>Aucun achat effectuer";
 	}
 
-	print_r($data);
+	echo"</table>";
 
 ?>
