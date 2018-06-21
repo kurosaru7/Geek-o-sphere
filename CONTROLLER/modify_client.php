@@ -7,6 +7,7 @@ if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) { //Securise connectio
     $result="<div class='valide'>Vos informations ont bien été modifiées.</div>";
 	}else{
     $result = $_SESSION['error'];
+    $_SESSION['error'] = "";
   }
   include('../VIEW/modif_client.php');
   $error = $_SESSION['error'];
