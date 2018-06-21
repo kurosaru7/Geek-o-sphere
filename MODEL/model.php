@@ -23,7 +23,7 @@ function getOneAccount($pseudo) { //Register all accounts
       return $accounts;
        
 }
- 
+
 
 function createAccount($f_name,$s_name,$pseudo,$pwd) { //Create account
   $bdd = dbConnect();
@@ -50,6 +50,12 @@ function getShopName($idPdLs){
   return $shop_name;
 }
 
+function getShopId($nom){
+	$bdd = dbConnect();
+	$shop_id = $bdd->prepare('SELECT `idPdLs` FROM `points_de_livraison` WHERE nom = ? ');
+	$shop_id->execute(array($nom));
+	return $shop_id;
+}
 
 function getItems() { //Create query 
   $bdd = dbConnect();
@@ -63,6 +69,11 @@ function getShops(){
   return $shops;
 }
 
+function getPdls(){
+	$bdd = dbConnect();
+	$pdl = $bdd->query('SELECT * FROM `points_de_livraison`');
+	return $pdl;
+}
 
 function addItem($class, $name, $description, $picture, $quantity, $idShop, $price, $subclass){ //Create query
   $bdd = dbConnect();
@@ -90,15 +101,15 @@ function getHisto() {
   $query = $bdd->query('SELECT * FROM achats WHERE idClients="'.$_SESSION['id'].'"');
 }
 
-function updateClient($name, $surname, $pseudo, $pdl) {
-  $bdd= dbConnect();
-  $items = $bdd->prepare('UPDATE clients SET nom=:name, prenom=:surname, pseudo=:pseudo, idPdLs=:pdl');
-  $items->execute(array(
-    'name' => $name,
-    'surname' => $surname,
-    'pseudo' => $pseudo,
-    'pdl' => $pdl
-  ));
+function updateClient($surname, $pseudo, $pdl, $id) {
+	$bdd= dbConnect();
+	$items = $bdd->prepare('UPDATE clients SET prenom=:surname, pseudo=:pseudo, idPdLs=:pdl WHERE idClients = :id');
+	$items->execute(array(
+		'surname' => $surname,
+		'pseudo' => $pseudo,
+		'pdl' => $pdl,
+		'id' => $id
+	));
 }
 
 function updateCredit($credit) {
@@ -122,7 +133,7 @@ function historyCall() {
 							        AND `achats`.etat!="Panier" 
 									AND `clients`.pseudo="'.$_SESSION['pseudo'].'"
 								)'
-						  ); 
+						  );
 	return $items;
 }
 

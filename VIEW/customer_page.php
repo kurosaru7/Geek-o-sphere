@@ -25,11 +25,5 @@
             <button class="change">Changer ses Coordonnées</button>
     </a>
   </div>
-
-  <?php 
-  if (isset($result)){
-    echo $result;
-    }
-    ?>
     </body>
 </html>
