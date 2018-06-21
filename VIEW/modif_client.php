@@ -21,7 +21,7 @@
   </center>
     <a href="./customer_page.php"> <button class="button">Retour</button></a>
     <?php if (isset($result)){
-    echo $result;
+      echo $result;
     }
     ?>
   </body>

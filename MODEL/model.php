@@ -6,7 +6,7 @@ function dbConnect() { //Link to the DataBase
     return $bdd;
   }catch(Exception $e) {
     die('Erreur : '.$e->getMessage());
-  }  
+  }
 }
 
 
@@ -17,11 +17,11 @@ function getAccounts() { //Register all accounts
 }
 
 function getOneAccount($pseudo) { //Register all accounts
-   
-    $bdd = dbConnect();     
-      $accounts = $bdd->query('SELECT * FROM `clients` WHERE pseudo="'.$pseudo.'"');    
+
+    $bdd = dbConnect();
+      $accounts = $bdd->query('SELECT * FROM `clients` WHERE pseudo="'.$pseudo.'"');
       return $accounts;
-       
+
 }
 
 
@@ -57,7 +57,7 @@ function getShopId($nom){
 	return $shop_id;
 }
 
-function getItems() { //Create query 
+function getItems() { //Create query
   $bdd = dbConnect();
   $items = $bdd->query('SELECT * FROM `articles`');
   return $items;
@@ -101,10 +101,12 @@ function getHisto() {
   $query = $bdd->query('SELECT * FROM achats WHERE idClients="'.$_SESSION['id'].'"');
 }
 
-function updateClient($surname, $pseudo, $pdl, $id) {
+function updateClient($name,$surname, $pseudo, $pdl, $id,$pwd) {
 	$bdd= dbConnect();
-	$items = $bdd->prepare('UPDATE clients SET prenom=:surname, pseudo=:pseudo, idPdLs=:pdl WHERE idClients = :id');
+	$items = $bdd->prepare('UPDATE clients SET nom=:name, prenom=:surname, pseudo=:pseudo, idPdLs=:pdl, mdp=:pwd WHERE idClients = :id');
 	$items->execute(array(
+    'pwd' => $pwd,
+    'name' => $name,
 		'surname' => $surname,
 		'pseudo' => $pseudo,
 		'pdl' => $pdl,
@@ -123,14 +125,14 @@ function updateCredit($credit) {
 function historyCall() {
 	$bdd = dbConnect();
 	$items = $bdd->query('SELECT  `achats`.date AS "achats.date", `achats`.time AS "achats.time",
-									`achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients", 
-									`achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite", 
-									`clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo", 
-									`articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom" 
-							FROM    achats, clients, articles 
-							WHERE ( `achats`.idArticles=`articles`.idArticles 
-							        AND `clients`.idClients=`achats`.idClients 
-							        AND `achats`.etat!="Panier" 
+									`achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients",
+									`achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
+									`clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
+									`articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom"
+							FROM    achats, clients, articles
+							WHERE ( `achats`.idArticles=`articles`.idArticles
+							        AND `clients`.idClients=`achats`.idClients
+							        AND `achats`.etat!="Panier"
 									AND `clients`.pseudo="'.$_SESSION['pseudo'].'"
 								) ORDER BY `achats`.date DESC, `achats`.time DESC'
 						  ); 
