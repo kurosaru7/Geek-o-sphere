@@ -19,5 +19,5 @@ if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) {
 
   include("../VIEW/detailed_item.php");
 }else{
-  include("../VIEW/authentification_requise.php");
+  include("../VIEW/verification_needed.php");
 }

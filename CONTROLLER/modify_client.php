@@ -12,7 +12,7 @@ if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) { //Securise connectio
   include('../VIEW/modif_client.php');
   $error = $_SESSION['error'];
 }else {
-	include('../VIEW/authentification_requise.php');
+	include('../VIEW/verification_needed.php');
 }
 
 ?>
