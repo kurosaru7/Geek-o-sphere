@@ -135,24 +135,24 @@ function historyCall() {
 							        AND `achats`.etat!="Panier"
 									AND `clients`.pseudo="'.$_SESSION['pseudo'].'"
 								) ORDER BY `achats`.date DESC, `achats`.time DESC'
-						  ); 
+						  );
 	return $items;
 }
 
 function basketCall() {
   $bdd = dbConnect();
   $items = $bdd->query('SELECT  `achats`.date AS "achats.date", `achats`.time AS "achats.time",
-                  `achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients", 
-                  `achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite", 
-                  `clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo", 
-                  `articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom" 
-              FROM    achats, clients, articles 
-              WHERE ( `achats`.idArticles=`articles`.idArticles 
-                      AND `clients`.idClients=`achats`.idClients 
-                      AND `achats`.etat="Panier" 
+                  `achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients",
+                  `achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
+                  `clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
+                  `articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom"
+              FROM    achats, clients, articles
+              WHERE ( `achats`.idArticles=`articles`.idArticles
+                      AND `clients`.idClients=`achats`.idClients
+                      AND `achats`.etat="Panier"
                   AND `clients`.pseudo="'.$_SESSION['pseudo'].'"
                 ) ORDER BY `achats`.date DESC, `achats`.time DESC'
-              ); 
+              );
   return $items;
 }
 
@@ -170,5 +170,19 @@ function supprItem($id) {
   $items = $bdd->prepare('UPDATE articles SET quantite="0" WHERE idArticles=:id');
   $items->execute(array('id' => $id));
 }
+
+function addBasket($idclient,$idArticle,$quantite){
+  $bdd= dbConnect();
+    $add = $bdd->prepare('INSERT INTO achats(etat, date, time, idClients, idArticles, quantite) values (:etat, :date, :time, :idclient, :idArticle, :quantite)');
+    $add->execute(array(
+      'etat' => 'Panier',
+      'date' => date('Y/m/d'),
+      'time' => strftime("%H:%M:%S"),
+      'idclient' => $idclient,
+      'idArticle' =>$idArticle,
+      'quantite' => $quantite
+    ));
+}
+
 
 ?>

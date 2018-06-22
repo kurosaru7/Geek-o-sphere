@@ -69,6 +69,19 @@ th {
 	width:100px;
 }
 
+.panier {
+	margin-left: 75%;
+	margin-top:-300px;
+}
+
+.perso {
+	width: 10%;
+	background-color: #4CAF50;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+
+}
 /*/////////////   Connection/Creation page ///////////////////*/
 
 input[type=text] {

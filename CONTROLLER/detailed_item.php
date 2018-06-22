@@ -4,6 +4,7 @@ session_start();
 
 if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) {
   $query = 'WHERE `idArticles` ='.$_GET['id'];
+  $_SESSION['id'] = $_GET['id'];
   $item = getArticlesCustom($query);
 
   $data = $item -> fetch();

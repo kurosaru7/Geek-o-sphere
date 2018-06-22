@@ -20,7 +20,7 @@
 			"<td>".utf8_encode($data['achats.etat']).
 			"<td>".$data['achats.quantite'].
 			"<td>".utf8_encode($data['articles.nom']).
-			"<td><a href=''><button>Annuler</button></a>"
+			"<td><a href='./remove_basket.php'><button>Annuler</button></a>"
 		;
 		$test = true;
 
