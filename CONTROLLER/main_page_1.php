@@ -17,7 +17,7 @@
 		$verif3=true;
 	}
 
-	$query_sql='';
+	$query_sql='WHERE quantite!="0"';
 	if ($verif1 == true && $verif2 == true && $verif3 == false) {							 //Create the query with SELECTs
 		$query_sql = 'WHERE ('.$part_1_query.' AND '.$part_2_query.' AND quantite!="0")'; 
 	} else if ($verif1 == true  && $verif2 == false && $verif3 == false) {
