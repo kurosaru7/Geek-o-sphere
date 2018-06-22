@@ -17,13 +17,11 @@
         <br>
 
         <a href="./history.php">
-            <button class="button">Voir l'Historique</button>
-        </a>
+            <button class="connection_custom">Voir l'Historique</button>
+        </a><br><br>
 
-    <div class="test">
     <a  href="./modify_client.php">
-            <button class="change">Changer ses Coordonnées</button>
+            <button class="modification_custom">Changer ses Coordonnées</button>
     </a>
-  </div>
     </body>
 </html>

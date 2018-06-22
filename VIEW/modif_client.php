@@ -6,23 +6,24 @@
 	<link rel="stylesheet" href="../VIEW/style.css" type="text/css" media="all" />
 	<meta charset ="UTF-8">
 </head>
-<body><br>
+<body>
   	<center>
-  		<img src="../VIEW/logo.png" class ="image" />
+    </center>
+    <div class="align_modif">
+    <center>
+      Modification des informations
   		<?php include('./navigation_bar.php'); ?>
       <form action="./modif.php" method="POST">
         <?php include('./modify_client_1.php'); ?>
     	<br>
-
-      <div class ="test">
-       <input type="submit" class="change" value="Sauvegarder">
-      </div>
+       <input type="submit" class="modification" value="Sauvegarder">
     </form>
   </center>
-    <a href="./customer_page.php"> <button class="button">Retour</button></a>
+    <br><a href="./customer_page.php"> <button class="modification2">Retour</button></a><br><br>
     <?php if (isset($result)){
       echo $result;
     }
     ?>
+    </div>
   </body>
 </html>

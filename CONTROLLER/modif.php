@@ -47,7 +47,7 @@ if(empty($_POST['pwd1'])){
     $empty = true;
 }
 if(!$true && !$empty){
-  $_SESSION['error'] = "<div class='error'>les mots de passe ne correspondent pas.</div>";
+  $_SESSION['error'] = "<div class='error'>Les mots de passe ne correspondent pas.</div>";
   header("location:./modify_client.php");
 }
 

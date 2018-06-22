@@ -11,7 +11,7 @@
     <img src="../VIEW/logo.png" class ="image" />
       <?php include('./navigation_bar.php'); ?>
       <form action="./search.php" method="get">
-        <input type="text" name="chain">
+        <input type="text" name="chain" class="connection_text" placeholder="Recherche">
         <select name="class" class="select">
         <option value ="">Catégories</option>
         <?php include('./main_page_2.php'); ?>
@@ -33,7 +33,6 @@
       <table>
         <?php include('./main_page_1.php'); ?>
       </table>
-    
+
 </body>
-</html>        
- 
+</html>

@@ -84,8 +84,69 @@ th {
 }
 /*/////////////   Connection/Creation page ///////////////////*/
 
-input[type=text] {
-	width: 29%;
+
+.connection {
+	width: 10%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.connection_custom 	{
+	width: 10%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin-left: 45%;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.modification {
+	width: 10%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin-left:-1%;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.modification_custom {
+	width: 10%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin-left:45%;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.modification2 {
+	width: 7%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin-left:46%;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.connection:hover {
+	background-color: #45a049;
+}
+
+
+.connection_text {
+	width: 19%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
@@ -105,16 +166,6 @@ input[type=number] {
   	appearance: textfield;
 }
 
-input[type=password] {
-	width: 30%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-}
-
 select {
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -122,21 +173,6 @@ select {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
-}
-
-input[type=submit] {
-	width: 10%;
-	background-color: #4CAF50;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-input[type=submit]:hover {
-	background-color: #45a049;
 }
 
 .right {
@@ -196,6 +232,15 @@ input[type=submit]:hover {
 	height:400px;
 }
 
+.image_modif {
+	width:300px;
+	height:300px;
+	margin-top : 2%;
+}
+
+.align_modif {
+	margin-top: 10%;
+}
 
 .alert {
 	width:200px;
@@ -232,6 +277,7 @@ input[type=submit]:hover {
 	background-color: green;
 	margin-left : 43%;
 	color: white;
+	text-align:center;
 	border: none;
 	border-radius: 4px;
 }
@@ -242,6 +288,7 @@ input[type=submit]:hover {
 	background-color: #f44336;
 	margin-left : 43%;
 	color: white;
+	text-align:center;
 	border: none;
 	border-radius: 4px;
 }
