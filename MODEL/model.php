@@ -184,5 +184,39 @@ function addBasket($idclient,$idArticle,$quantite){
     ));
 }
 
+function historySelect($cond) {
+  $bdd= dbConnect();
+  $add = $bdd->prepare('SELECT  `achats`.date AS "achats.date", `achats`.time AS "achats.time",
+                  `achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients",
+                  `achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
+                  `clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
+                  `articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom"
+              FROM    achats, clients, articles
+              WHERE ( `achats`.idArticles=`articles`.idArticles
+                      AND `clients`.idClients=`achats`.idClients
+                      AND `achats`.etat!="Panier" '.$cond.' ) ORDER BY `achats`.date DESC, `achats`.time DESC');
+  $add->execute(array(
+    'id' => $_SESSION['id']
+  ));
+
+  return $add;
+
+}
+
+function historyAll($cond) {
+  $bdd= dbConnect();
+  $add = $bdd->query('SELECT  `achats`.date AS "achats.date", `achats`.time AS "achats.time",
+                  `achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients",
+                  `achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
+                  `clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
+                  `articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom"
+              FROM    achats, clients, articles
+              WHERE ( `achats`.idArticles=`articles`.idArticles
+                      AND `clients`.idClients=`achats`.idClients
+                      AND `achats`.etat!="Panier" '.$cond.' ) ORDER BY `achats`.date DESC, `achats`.time DESC');
+
+  return $add;
+
+}
 
 ?>
