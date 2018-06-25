@@ -141,7 +141,7 @@ function historyCall() {
 
 function basketCall() {
   $bdd = dbConnect();
-  $items = $bdd->query('SELECT  `achats`.date AS "achats.date", `achats`.time AS "achats.time",
+  $items = $bdd->query('SELECT  `achats`.idAchats AS "achats.id", `achats`.date AS "achats.date", `achats`.time AS "achats.time",
                   `achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients",
                   `achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
                   `clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
@@ -182,6 +182,12 @@ function addBasket($idclient,$idArticle,$quantite){
       'idArticle' =>$idArticle,
       'quantite' => $quantite
     ));
+}
+
+function removeBasket($idAchats){
+  $bdd = dbConnect();
+  $rm = $bdd->prepare('DELETE FROM `achats` WHERE `achats`.`idAchats` = :idachat ');
+  $rm->execute(array('idachat' => $idAchats));
 }
 
 function historySelect($cond) {
