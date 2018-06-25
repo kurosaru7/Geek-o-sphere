@@ -34,21 +34,20 @@
 			<?php echo $description; ?>
 		</div>
 
+    <div class="image_article">
+      <img src="../VIEW/image_sql/<?php echo $image; ?>" class ="image" />
+    </div>
+
 		<div class="panier">
 			<form action="add_basket.php" method ="post">
 				<input type="hidden" name="id" value=<?php echo $_SESSION['id']?>>
 				<select name="quantite" class="select" required>
 					<option value="" disabled selected>Quantité</option>
-          <option value ="1">1</option>
-          <option value ="2">2</option>
-          <option value ="3">3</option>
-          <option value ="4">4</option>
-          <option value ="5">5</option>
-          <option value ="6">6</option>
-          <option value ="7">7</option>
-          <option value ="8">8</option>
-          <option value ="9">9</option>
-          <option value ="10">10</option>
+          <?php
+          for($i=1;$i<$quantite+1;$i++){
+            echo '<option value ='.$i.'>'.$i.'</option>';
+          }
+          ?>
         </select><br>
         <input type="submit" value="Ajouter au panier" class="perso">
        </form>

@@ -16,7 +16,7 @@ if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) {
   $quantite = utf8_encode($data['quantite']);
   $prix =  utf8_encode($data['prix']);
   $sous_categorie = utf8_encode($data['sous_categorie']);
-
+  $image = $data['image'];
   include("../VIEW/detailed_item.php");
 }else{
   include("../VIEW/verification_needed.php");
