@@ -6,7 +6,7 @@
       <th>Etat
       <th>Quantité
       <th>Client
-      <th colspan=2>Article
+      <th colspan=3>Article
      "
   ;
 
@@ -38,13 +38,18 @@
       "<td>".utf8_encode($data['achats.etat']).
       "<td>".$data['achats.quantite'].
       "<td>".$data['clients.pseudo'].
-      "<td>".utf8_encode($data['articles.nom'])
+      "<td>".utf8_encode($data['articles.nom']).
+
+      "<td> <form action='./remove_history.php' method='get'>
+              <input type='hidden' name='id' value='".$data['achats.idAchats']."'>
+              <button>Supprimer</button>
+            </form>"
     ;
     $test = true;
 
   } if (!$test) {
 
-    echo"<tr><td><td><td><td colspan=3>Aucun achat effectuer";
+    echo"<tr><td><td><td><td colspan=4>Aucun achat effectuer";
   }
 
   echo"</table>";
