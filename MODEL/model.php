@@ -190,6 +190,15 @@ function removeBasket($idAchats) {
   $rm->execute(array('idachat' => $idAchats));
 }
 
+function modifBasket($id,$quantite){
+  $bdd=dbConnect();
+  $modif=$bdd->prepare('UPDATE achats SET quantite=:quantite WHERE idArticles=:idarticle');
+  $modif->execute(array(
+    'idarticle' => $id,
+    'quantite' => $quantite
+  ));
+}
+
 function historySelect($cond) {
   $bdd= dbConnect();
   $add = $bdd->prepare('SELECT  `achats`.date AS "achats.date", `achats`.time AS "achats.time",
