@@ -24,7 +24,7 @@
 				<input type = "password" class="connection_text" placeholder="Mot de passe" name = "pwd"><br>
 				<input type = "submit" class="connection" value = "Créer">
 			</form>
-			<a href="../index.php"><button class="connection">Retour à la page de connexion</button></a>
+			<a href="../index.php"><button class="connection_custom2">Retour à la page de connexion</button></a>
 		<?php
 		if(isset($error)) {
 			echo $error;

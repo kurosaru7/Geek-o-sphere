@@ -67,7 +67,7 @@ if(!$true && !$empty){
     }else{
       $_POST['pwd1'] = sha1($_POST['pwd1']);
     }
-    updateClient($_POST['nom'],$_POST['prenom'],$_POST['pseudo'],$id['idPdLs'],$account['idClients'],$_POST['pwd1']);
+    updateClient(utf8_decode($_POST['nom']),utf8_decode($_POST['prenom']),utf8_decode($_POST['pseudo']),$id['idPdLs'],$account['idClients'],$_POST['pwd1']);
     $_SESSION['pseudo'] = $_POST['pseudo'];
     $_SESSION['informations_change'] = true;
     header("location:./modify_client.php");

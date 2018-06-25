@@ -106,6 +106,16 @@ th {
 	border-radius: 4px;
 	cursor: pointer;
 }
+.connection_custom2 {
+	width: 10%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin-top:-1%;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
 
 .modification {
 	width: 10%;

@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 require('../MODEL/model.php');
@@ -24,7 +24,7 @@ if(isset($_POST['pseudo'])) {
 		}else if(strlen($_POST['pseudo']) < 6) {
 				$error = "<div class='alert2'>Votre pseudo doit au moins contenir 6 caractères !</div>";
 		}else {
-			createAccount($_POST['f_name'],$_POST['s_name'],$_POST['pseudo'],sha1($_POST['pwd']));
+			createAccount(utf8_decode($_POST['f_name']),utf8_decode($_POST['s_name']),utf8_decode($_POST['pseudo']),sha1($_POST['pwd']));
 			 header('location:main_page.php');
 			 $_SESSION['pseudo'] = $_POST['pseudo'];
 			 $_SESSION['pwd'] = $_POST['pwd'];
