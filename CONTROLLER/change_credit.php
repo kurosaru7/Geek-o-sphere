@@ -2,6 +2,8 @@
 	session_start();
 	require("../MODEL/model.php");
 
+	$_GET['number'] = intval($_GET['number']);
+
 	$query = getOneAccount($_SESSION['pseudo']);
 	while ( $data = $query -> fetch()) {
 		$credit = $data['credit'];
