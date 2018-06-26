@@ -234,4 +234,18 @@ function historyAll($cond) {
 
 }
 
+function supprAccount($id) {
+  $bdd= dbConnect();
+
+  $query = $bdd->prepare('DELETE FROM achats WHERE idClients=:id');
+  $query->execute(array(
+    'id' => $id
+  ));
+
+  $query = $bdd->prepare('DELETE FROM clients WHERE idClients=:id');
+  $query->execute(array(
+    'id' => $id
+  ));
+}
+
 ?>
