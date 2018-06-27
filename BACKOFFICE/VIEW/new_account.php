@@ -7,6 +7,8 @@
 	<body>
 		<center>
 
+			<h1>Créer un nouveau compte</h1><br>
+
 			<?php require('./error.php') ?>
 
 			<form action ="./account_creation.php" method="POST">

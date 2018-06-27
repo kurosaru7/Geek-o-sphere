@@ -17,7 +17,7 @@
     		"<td>".utf8_encode($data['nom']).
     		"<td>".$data['prenom'].
     		"<td><form action='./change_account.php' method='get'>
-    				<input type='hidden' name='id' value='".$data['idClients']."'>
+    				<input type='hidden' name='pseudo' value='".$data['pseudo']."'>
     				<button>Modifier</button>
     			 </form>
     		 <td><form action='./suppr_account.php' method='get'>
