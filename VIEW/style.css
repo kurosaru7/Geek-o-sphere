@@ -237,6 +237,16 @@ select {
 	cursor: pointer;
 }
 
+.button3 {
+	background-color: #a5a5a5;
+	color: white;
+	padding: 7px 5px;
+	margin: 8px 10;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
 .image {
 	width:400px;
 	height:400px;
@@ -286,6 +296,16 @@ select {
 	padding: 7px 5px;
 	background-color: green;
 	margin-left : 43%;
+	color: white;
+	text-align:center;
+	border: none;
+	border-radius: 4px;
+}
+
+.valide2 {
+	width:200px;
+	padding: 7px 5px;
+	background-color: green;
 	color: white;
 	text-align:center;
 	border: none;

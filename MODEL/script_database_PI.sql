@@ -99,9 +99,11 @@ CREATE TABLE IF NOT EXISTS `geek-o-sphere`.`achats` (
 	  `idClients` INT(3) NOT NULL,
 	  `idArticles` INT(3) NOT NULL,
 	  `quantite` INT(5) NOT NULL,
+	  `idMagasins` INT(3) NOT NULL, 
 	  PRIMARY KEY (`idAchats`, `idClients`, `idArticles`),
 	  INDEX `fk_achats_clients1_idx` (`idClients` ASC),
-	  INDEX `fk_achats_articles1_idx` (`idArticles` ASC),
+	  INDEX `fk_achats_articles1_idx` (`idArticles` ASC), 
+	  INDEX `fk_achats_magasins1_idx` (`idMagasins` ASC), 
 	  CONSTRAINT `fk_achats_clients1`
 	    FOREIGN KEY (`idClients`)
 	    REFERENCES `geek-o-sphere`.`clients` (`idClients`)
@@ -110,6 +112,11 @@ CREATE TABLE IF NOT EXISTS `geek-o-sphere`.`achats` (
 	  CONSTRAINT `fk_achats_articles1`
 	    FOREIGN KEY (`idArticles`)
 	    REFERENCES `geek-o-sphere`.`articles` (`idArticles`)
+	    ON DELETE NO ACTION
+	    ON UPDATE NO ACTION,
+	  CONSTRAINT `fk_achats_magasins1`
+	    FOREIGN KEY (`idMagasins`)
+	    REFERENCES `geek-o-sphere`.`magasins` (`idMagasins`)
 	    ON DELETE NO ACTION
 	    ON UPDATE NO ACTION)
 	ENGINE = InnoDB;
@@ -198,11 +205,11 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `geek-o-sphere`;
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (1, 'En cours', '2018/05/16', '13:04', 4, 3, 1);
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (2, 'Livré', '2018/05/03', '19:14', 3, 4, 2);
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (3, 'En cours', '2018/05/09', '07:45', 2, 5, 3);
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (4, 'Panier', '2018/04/30', '15:34', 5, 3, 4);
-INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`) VALUES (5, 'En cours', '2018/05/22', '14:40', 1, 2, 5);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`, `idMagasins`) VALUES (1, 'En cours', '2018/05/16', '13:04', 4, 3, 1, 1);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`, `idMagasins`) VALUES (2, 'Livré', '2018/05/03', '19:14', 3, 4, 2, 2);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`, `idMagasins`) VALUES (3, 'En cours', '2018/05/09', '07:45', 2, 5, 3, 3);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`, `idMagasins`) VALUES (4, 'Panier', '2018/04/30', '15:34', 5, 3, 4, 4);
+INSERT INTO `geek-o-sphere`.`achats` (`idAchats`, `etat`, `date`, `time`, `idClients`, `idArticles`, `quantite`, `idMagasins`) VALUES (5, 'En cours', '2018/05/22', '14:40', 1, 2, 5, 5);
 
 COMMIT;
 
