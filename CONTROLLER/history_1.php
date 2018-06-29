@@ -28,7 +28,7 @@
 
 	} if (!$test) {
 
-		echo"<tr><td><td><td><td colspan=3>Aucun achat effectuer";
+		echo"<tr><td><td><td><td colspan=3>Aucun achat effectué";
 	}
 
 	echo"</table>";
