@@ -160,7 +160,7 @@ function basketCall() {
                   `achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients",
                   `achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
                   `clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
-                  `articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom", `achats`.idAchats AS "achats.idAchats"
+                  `articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom", `achats`.idAchats AS "achats.idAchats", `articles`.quantite AS "articles.quantite"
               FROM    achats, clients, articles
               WHERE ( `achats`.idArticles=`articles`.idArticles
                       AND `clients`.idClients=`achats`.idClients
