@@ -52,8 +52,15 @@ function getShopName($idPdLs){
 
 function getPdlName($idPdLs){
   $bdd = dbConnect();
-  $shop_name = $bdd->prepare('SELECT `nom` FROM `magasins` WHERE idMagasins = ?');
+  $shop_name = $bdd->prepare('SELECT nom,idPdLs FROM `points_de_livraison` WHERE idPdLs = ?');
   $shop_name->execute(array($idPdLs));
+  return $shop_name;
+}
+
+
+function getAllPdl(){
+  $bdd = dbConnect();
+  $shop_name = $bdd->query('SELECT nom,idPdLs FROM `points_de_livraison` ');
   return $shop_name;
 }
 
@@ -135,7 +142,7 @@ function historyCall() {
 									`achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients",
 									`achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
 									`clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
-									`articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom", 
+									`articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom",
                   `magasins`.nom AS "magasins.nom"
 							FROM    achats, clients, articles, magasins
 							WHERE ( `magasins`.idMagasins=`achats`.idMagasins AND `achats`.idArticles=`articles`.idArticles
@@ -258,12 +265,12 @@ function supprAccount($id) {
 
 function paymentCall() {
   $bdd = dbConnect();
-  $items = $bdd->query('SELECT  `articles`.nom AS "articles.nom", 
-                                `articles`.prix AS "articles.prix", 
-                                `achats`.idAchats AS "achats.idAchats", 
-                                `articles`.quantite AS "articles.quantite", 
-                                `achats`.quantite AS "achats.quantite", 
-                                `clients`.credit AS "clients.credit" 
+  $items = $bdd->query('SELECT  `articles`.nom AS "articles.nom",
+                                `articles`.prix AS "articles.prix",
+                                `achats`.idAchats AS "achats.idAchats",
+                                `articles`.quantite AS "articles.quantite",
+                                `achats`.quantite AS "achats.quantite",
+                                `clients`.credit AS "clients.credit"
                         FROM    achats, clients, articles
                         WHERE ( `achats`.idArticles=`articles`.idArticles
                             AND `clients`.idClients=`achats`.idClients
@@ -285,7 +292,7 @@ function buy ($nameArticles, $idAchats, $qAchats, $idPdLs) {
 
   $query = $bdd->prepare('UPDATE achats SET etat="En cours", idMagasins=:idPdLs WHERE idAchats=:id');
   $query->execute(array(
-    'idPdLs' => $idPdLs, 
+    'idPdLs' => $idPdLs,
     'id' => $idAchats
   ));
 }
@@ -295,7 +302,7 @@ function emptyWallet ($count) {
 
   $query = $bdd->prepare('UPDATE clients SET credit=:count WHERE pseudo=:pseudo');
   $query->execute(array(
-    'count' => $count, 
+    'count' => $count,
     'pseudo' => $_SESSION['pseudo']
   ));
 }
