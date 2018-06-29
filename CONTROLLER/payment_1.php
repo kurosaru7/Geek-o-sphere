@@ -32,7 +32,7 @@
 	echo "</table><br><br>";
 
 	if (isset($money) && $count > $money) {
-		
+
 		echo "Prix Total --> ".$count." €<br>
 			  Credit actuel --> ".$money." €<br><br>
 			  <a href='./wallet.php'>
@@ -47,10 +47,10 @@
 
 			  	Point de livraison : <select name='pdl'>";
 
-		$query = getShops();
+		$query = getAllPdl();
 		while ($data = $query ->fetch()) {
 
-			echo "<option value='".$data['idMagasins']."'>".$data['nom']."</option>";
+			echo "<option value='".$data['idPdLs']."'>".utf8_encode($data['nom'])."</option>";
 		}
 
 		echo "	</select><br>
@@ -58,5 +58,5 @@
 			  </form>";
 
 	}
-	
+
 ?>
