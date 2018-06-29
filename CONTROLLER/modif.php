@@ -53,13 +53,13 @@ if(!$true && !$empty){
 
  if($exist && $same){
   if(strlen($_POST['pseudo']) < 6) {
-    $_SESSION['error'] = "<div class='error'>Votre pseudo doit au moins contenir 6 caractères !</div>";
+    $_SESSION['error'] = "<div class='error'>Votre pseudo doit au moins contenir 6 caractères alphanumériques !</div>";
     header("location:./modify_client.php");
   }else if($pseudo_already_exist){
     $_SESSION['error'] = "<div class='error'>Ce pseudo existe déja, merci d'en choisir un autre!</div>";
     header("location:./modify_client.php");
   }else if(strlen($_POST['pwd1']) < 5 && !$empty) {
-    $_SESSION['error'] = "<div class='error'>Votre mot de passe doit au moins contenir 5 caractères !</div>";
+    $_SESSION['error'] = "<div class='error'>Votre mot de passe doit au moins contenir 5 caractères alphanumériques !</div>";
     header("location:./modify_client.php");
   }else{
     if($empty){

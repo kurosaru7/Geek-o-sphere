@@ -20,9 +20,9 @@ if(isset($_POST['pseudo'])) {
 	}else if(!empty($_POST['pseudo']) && !empty($_POST['pwd']) && !empty($_POST['f_name']) && !empty($_POST['s_name'])) { //Creation account
 
 		if(strlen($_POST['pwd']) < 5) {
-			$error = "<div class='alert2'>Votre mot de passe doit au moins contenir 5 caractères !</div>";
+			$error = "<div class='alert2'>Votre mot de passe doit au moins contenir 5 caractères alphanumériques !</div>";
 		}else if(strlen($_POST['pseudo']) < 6) {
-				$error = "<div class='alert2'>Votre pseudo doit au moins contenir 6 caractères !</div>";
+				$error = "<div class='alert2'>Votre pseudo doit au moins contenir 6 caractères alphanumériques !</div>";
 		}else {
 			createAccount(utf8_decode($_POST['f_name']),utf8_decode($_POST['s_name']),utf8_decode($_POST['pseudo']),sha1($_POST['pwd']));
 			 header('location:main_page.php');
