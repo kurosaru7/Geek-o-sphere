@@ -35,7 +35,7 @@ if($_POST['pwd1'] == $_POST['pwd2']){
 
 if(!$exist){
   $error = "<h2 style='color: Red'>Merci de rentrer un point de livraison valide.</h2>";
-  header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseudo']);
+  header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseud']);
 }
 
 if(empty($_POST['pwd1'])){
@@ -43,19 +43,19 @@ if(empty($_POST['pwd1'])){
 }
 if(!$same && !$empty){
   $error = "<h2 style='color: Red'>Les mots de passe ne correspondent pas.</h2>";
-  header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseudo']);
+  header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseud']);
 }
 
  if($exist && $same){
   if(strlen($_POST['pseudo']) < 6) {
     $error = "<h2 style='color: Red'>Votre pseudo doit au moins contenir 6 caractères !</h2>";
-    header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseudo']);
+    header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseud']);
   }else if($pseudo_already_exist){
     $error = "<h2 style='color: Red'>Ce pseudo existe déja, merci d'en choisir un autre!</h2>";
-    header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseudo']);
+    header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseud']);
   }else if(strlen($_POST['pwd1']) < 5 && !$empty) {
     $error = "<h2 style='color: Red'>Votre mot de passe doit au moins contenir 5 caractères !</h2>";
-    header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseudo']);
+    header("location:./change_account.php?error=".$error."&pseudo=".$_POST['pseud']);
   }else{
     if($empty){
       $_POST['pwd1'] = $account['mdp'];
