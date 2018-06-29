@@ -18,11 +18,11 @@
 		<?php include('../../CONTROLLER/main_page_3.php');	?>
 	<option value="Hardware">Hardware</option>
 	</select><br>
-	Nom: <input type="text" name="name"><br>
-	Description: <input type="text" name="description"><br>
-	Image: <input type="text" name="picture"><br>
-	Quantité: <input type="number" name="quantity"><br>
-	Prix: <input type="number" step="0.01" name="price">€<br>
+	Nom: <input type="text" maxlength=100 name="name"><br>
+	Description: <input type="text" maxlength=140 name="description"><br>
+	Image: <input type="text" maxlength=45 name="picture"><br>
+	Quantité: <input type="number" max=9999 name="quantity"><br>
+	Prix: <input type="number" max=9999.99 step="0.01" name="price">€<br>
 	Magasin: <select name="idShop">
 	<option selected="">
 		<?php include ('./shop_backoffice.php'); ?>
@@ -32,4 +32,4 @@
 
 	<a href="./home.php"><button class="button">Retour</button></a>
 </body>
-</html>	
+</html>
