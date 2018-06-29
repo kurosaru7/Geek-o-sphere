@@ -11,6 +11,6 @@
 			<tr><th>Nom de l'article</th><th>Stock actuel</th><th colspan=4>Opération</th></tr>
 		<?php include ('../CONTROLLER/print_products.php'); ?>
 		</table>
-	<a href="../index.php"><button class="button">Retour</button></a>
+	<a href="./home.php"><button class="button">Retour</button></a>
 </body>
 </html>

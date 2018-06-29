@@ -1,6 +1,12 @@
 <?php
+	session_start();
+	require('../../MODEL/model.php');
 
-require('../../MODEL/model.php');
-include('../VIEW/add_item.php');
+	if (isset($_SESSION['co'])) {
 
-?>
+		include('../VIEW/add_item.php');
+
+	} else {
+
+		header('location: ../index.php');
+	}

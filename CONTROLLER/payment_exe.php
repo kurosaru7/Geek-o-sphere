@@ -13,8 +13,8 @@
 			$test = true;
 
 		} else {
-
-			buy($data['articles.nom'], $data['achats.idAchats'], ($data['articles.quantite']-$data['achats.quantite']));
+			var_dump($_GET);
+			buy($data['articles.nom'], $data['achats.idAchats'], ($data['articles.quantite']-$data['achats.quantite']), $_GET['pdl']);
 			$count = $count + ($data['articles.prix']*$data['achats.quantite']);
 		}
 		$wallet = $data['clients.credit'];

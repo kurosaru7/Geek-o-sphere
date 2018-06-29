@@ -18,6 +18,6 @@
     	</form>
     </center><br><br>
 
-   <a href="../index.php"><button class="button">Retour</button></a>
+   <a href="./home.php"><button class="button">Retour</button></a>
   </body>
 </html>

@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `geek-o-sphere`.`achats` (
 	  `idClients` INT(3) NOT NULL,
 	  `idArticles` INT(3) NOT NULL,
 	  `quantite` INT(5) NOT NULL,
-	  `idMagasins` INT(3) NOT NULL, 
+	  `idMagasins` INT(3) NOT NULL DEFAULT '1', 
 	  PRIMARY KEY (`idAchats`, `idClients`, `idArticles`),
 	  INDEX `fk_achats_clients1_idx` (`idClients` ASC),
 	  INDEX `fk_achats_articles1_idx` (`idArticles` ASC), 

@@ -4,7 +4,9 @@
 
 	if (isset($_SESSION['co'])) {
 	
-		include('../VIEW/new_account.php');
+		validDelivery($_GET['id']);
+		$error = "<h2 style='color: LimeGreen'>Article(s) livrés !</h2>";
+		header('location: ./delivery.php?error='.$error);
 
 	} else {
 

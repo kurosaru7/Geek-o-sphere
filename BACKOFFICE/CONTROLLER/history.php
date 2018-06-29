@@ -1,17 +1,21 @@
 <?php
-session_start();
+	session_start();
+	require('../../MODEL/model.php');
 
-if (!isset($_SESSION['id'])) {
+	if (isset($_SESSION['co'])) {
 
-  $_SESSION['id'] = "";
-}
+		if (!isset($_SESSION['id'])) {
 
-if (!isset($_SESSION['clients'])) {
+  			$_SESSION['id'] = "";
 
-  $_SESSION['clients'] = "";
-}
+		} if (!isset($_SESSION['clients'])) {
 
-require('../../MODEL/model.php');
-include('../VIEW/history.php');
+  			$_SESSION['clients'] = "";
+		}
+		include('../VIEW/history.php');
 
+	} else {
+
+		header('location: ../index.php');
+	}
 ?>

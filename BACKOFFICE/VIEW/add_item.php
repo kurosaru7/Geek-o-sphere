@@ -30,6 +30,6 @@
 	<input type="submit" name="go" value="Ajouter">
 	</form>
 
-	<a href="../index.php"><button class="button">Retour</button></a>
+	<a href="./home.php"><button class="button">Retour</button></a>
 </body>
 </html>	

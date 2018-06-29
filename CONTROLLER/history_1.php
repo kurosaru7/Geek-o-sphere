@@ -5,6 +5,7 @@
 			<th>Heure
 			<th>Etat
 			<th>Quantité
+			<th>Point de livraison
 			<th colspan=2>Article
 		 "
 	;
@@ -19,6 +20,7 @@
 			"<td>".$data['achats.time'].
 			"<td>".utf8_encode($data['achats.etat']).
 			"<td>".$data['achats.quantite'].
+			"<td>".$data['magasins.nom'].
 			"<td>".utf8_encode($data['articles.nom']).
 			"<td><a href='detailed_item.php?id=".$data['achats.idArticles']."'><button>...</button></a>"
 		;
@@ -26,7 +28,7 @@
 
 	} if (!$test) {
 
-		echo"<tr><td><td><td colspan=3>Aucun achat effectuer";
+		echo"<tr><td><td><td><td colspan=3>Aucun achat effectuer";
 	}
 
 	echo"</table>";

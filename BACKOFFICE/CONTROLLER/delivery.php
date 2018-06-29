@@ -4,7 +4,7 @@
 
 	if (isset($_SESSION['co'])) {
 
-		include('../VIEW/change_account.php');
+		include('../VIEW/delivery.php');
 
 	} else {
 

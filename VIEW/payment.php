@@ -15,5 +15,10 @@
 			<?php include('./payment_1.php'); ?>
 
 		</center>
+
+		<a href="./wallet.php" style="margin-left: 30px">
+			<button class="button">Retour au panier</button>
+		</a>
+
 	</body>
 </html>

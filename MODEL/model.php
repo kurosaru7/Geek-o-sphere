@@ -50,6 +50,13 @@ function getShopName($idPdLs){
   return $shop_name;
 }
 
+function getPdlName($idPdLs){
+  $bdd = dbConnect();
+  $shop_name = $bdd->prepare('SELECT `nom` FROM `magasins` WHERE idMagasins = ?');
+  $shop_name->execute(array($idPdLs));
+  return $shop_name;
+}
+
 function getShopId($nom){
 	$bdd = dbConnect();
 	$shop_id = $bdd->prepare('SELECT `idPdLs` FROM `points_de_livraison` WHERE nom = ? ');
@@ -128,9 +135,10 @@ function historyCall() {
 									`achats`.idArticles AS "achats.idArticles", `achats`.idClients AS "achats.idClients",
 									`achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
 									`clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
-									`articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom"
-							FROM    achats, clients, articles
-							WHERE ( `achats`.idArticles=`articles`.idArticles
+									`articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom", 
+                  `magasins`.nom AS "magasins.nom"
+							FROM    achats, clients, articles, magasins
+							WHERE ( `magasins`.idMagasins=`achats`.idMagasins AND `achats`.idArticles=`articles`.idArticles
 							        AND `clients`.idClients=`achats`.idClients
 							        AND `achats`.etat!="Panier"
 									AND `clients`.pseudo="'.$_SESSION['pseudo'].'"
@@ -245,6 +253,60 @@ function supprAccount($id) {
   $query = $bdd->prepare('DELETE FROM clients WHERE idClients=:id');
   $query->execute(array(
     'id' => $id
+  ));
+}
+
+function paymentCall() {
+  $bdd = dbConnect();
+  $items = $bdd->query('SELECT  `articles`.nom AS "articles.nom", 
+                                `articles`.prix AS "articles.prix", 
+                                `achats`.idAchats AS "achats.idAchats", 
+                                `articles`.quantite AS "articles.quantite", 
+                                `achats`.quantite AS "achats.quantite", 
+                                `clients`.credit AS "clients.credit" 
+                        FROM    achats, clients, articles
+                        WHERE ( `achats`.idArticles=`articles`.idArticles
+                            AND `clients`.idClients=`achats`.idClients
+                            AND `achats`.etat="Panier"
+                            AND `clients`.pseudo="'.$_SESSION['pseudo'].'"
+                      ) ORDER BY `achats`.date DESC, `achats`.time DESC'
+              );
+  return $items;
+}
+
+function buy ($nameArticles, $idAchats, $qAchats, $idPdLs) {
+  $bdd = dbConnect();
+
+  $query = $bdd->prepare('UPDATE articles SET quantite=:qAchats WHERE nom=:name');
+  $query->execute(array(
+    'qAchats' => $qAchats,
+    'name' => $nameArticles
+  ));
+
+  $query = $bdd->prepare('UPDATE achats SET etat="En cours", idMagasins=:idPdLs WHERE idAchats=:id');
+  $query->execute(array(
+    'idPdLs' => $idPdLs, 
+    'id' => $idAchats
+  ));
+}
+
+function emptyWallet ($count) {
+  $bdd = dbConnect();
+
+  $query = $bdd->prepare('UPDATE clients SET credit=:count WHERE pseudo=:pseudo');
+  $query->execute(array(
+    'count' => $count, 
+    'pseudo' => $_SESSION['pseudo']
+  ));
+}
+
+function validDelivery ($idAchats) {
+  $bdd = dbConnect();
+
+  $rm = $bdd->prepare('UPDATE achats SET etat=:etat WHERE idAchats=:idachat');
+  $rm->execute(array(
+    'etat' => utf8_decode("Livré"),
+    'idachat' => $idAchats
   ));
 }
 

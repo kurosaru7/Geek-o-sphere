@@ -5,7 +5,7 @@
 	//Print all lignes of the table
 	$data = $account -> fetch();
 
-	$data2 = getShopName($data['idPdLs']);
+	$data2 = getPdlName($data['idPdLs']);
 	while ($shop_name = $data2 -> fetch()) {
 		echo '	<tr>
 				<td style="text-align:center"; > Nom : '.utf8_encode($data['nom']).'</th>

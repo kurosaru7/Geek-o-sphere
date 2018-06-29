@@ -22,7 +22,7 @@
 
 		<br><br><br>
 
-		<form action="./change_credit.php" method="get">
+		<form action="./change_wallet.php" method="get">
 			<div class="text_p2">Montant : 
 			<select name="sign">
 				<option value="+">+</option>

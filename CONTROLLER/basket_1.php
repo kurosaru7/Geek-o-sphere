@@ -31,7 +31,16 @@
 
 	} if (!$test) {
 
-		echo"<tr><td><td><td colspan=3>Panier vide";
+		echo"<tr><td><td><td><td colspan=3>Panier vide";
 	}
 
+	echo "</table>";
+
+	if ($test) {
+
+		echo '  <br>
+			    <a href="./payment.php">
+				    <button class="button">Payer</button>
+			    </a>';
+	}
 ?>

@@ -12,6 +12,10 @@
 
 			<br><br><br>
 
+			<?php include('./error.php'); ?>
+
+			<br><br>
+
 			<?php include('./basket_1.php'); ?>
 
 		</center>

@@ -7,8 +7,7 @@
 	<meta charset ="UTF-8">
 </head>
 <body>
-  	<center>
-    </center>
+  	
     <div class="align_modif">
     <center>
       Modification des informations

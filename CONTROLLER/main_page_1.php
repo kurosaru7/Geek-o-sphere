@@ -1,13 +1,13 @@
 <?php
 	$verif1=false;
 	if (isset($_SESSION['articles']) && $_SESSION['articles'] != '') {   //Watch the first SELECT
-		$part_1_query = ' categorie="'.$_SESSION['articles'].'"';
+		$part_1_query = ' categorie="'.utf8_decode($_SESSION['articles']).'"';
 		$verif1=true;
 	}
 
 	$verif2=false;
 	if (isset($_SESSION['categorie']) && $_SESSION['categorie'] != '') { //Watch the second SELECT
-		$part_2_query = ' sous_categorie="'.$_SESSION['categorie'].'"';
+		$part_2_query = ' sous_categorie="'.utf8_decode($_SESSION['categorie']).'"';
 		$verif2=true;
 	}
 
