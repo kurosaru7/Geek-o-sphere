@@ -15,7 +15,6 @@
 	Sous-Catégorie: <select name="subclass" required>
 	<option selected value=""></option>
 		<?php include('../../CONTROLLER/main_page_3.php');	?>
-	<option value="Hardware">Hardware</option>
 	</select><br>
 	Nom: <input type="text" maxlength=100 name="name" required><br>
 	Description: <input type="text" maxlength=140 name="description" required><br>
