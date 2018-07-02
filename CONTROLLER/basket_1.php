@@ -44,7 +44,7 @@
 
 	} if (!$test) {
 
-		echo"<tr><td><td><td><td colspan=3>Panier vide";
+		echo"<tr><td><td><td><td><td colspan=2>Panier vide";
 	}
 
 	echo "</table>";
