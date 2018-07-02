@@ -2,8 +2,8 @@
 
 	$account = getOneAccount($_SESSION['pseudo']);
 
-	//Print all lignes of the table
-	$data = $account -> fetch();
+	
+	$data = $account -> fetch(); //Print all lignes of the table
 
 	$data2 = getPdlName($data['idPdLs']);
 	while ($shop_name = $data2 -> fetch()) {

@@ -5,9 +5,9 @@ session_start();
 if(isset($_SESSION['pseudo']) && isset($_SESSION['pwd'])) {
   $query = 'WHERE `idArticles` ='.$_GET['id'];
   $_SESSION['id'] = $_GET['id'];
-  $item = getArticlesCustom($query);
+  $item = getArticlesCustom($query); // Recovery the item.
 
-  $data = $item -> fetch();
+  $data = $item -> fetch(); // Display the item information by information.
 
   $categorie = utf8_encode($data['categorie']);
   $nom = utf8_encode($data['nom']);

@@ -12,7 +12,7 @@ $account = $data_account->fetch();
 $data = getShopId($_POST['pdl']);
 $id = $data -> fetch();
 
-$accounts = getAccounts(); //Call all accounts in DataBase
+$accounts = getAccounts(); // Call all accounts in DataBase
 $pseudo_already_exist = false;
 
 

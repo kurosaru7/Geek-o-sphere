@@ -8,12 +8,12 @@
 			<th>Point de livraison
 			<th colspan=2>Article
 		 "
-	;
+	; // Display all table names.
 
 	$test = false;
 
-	$query = historyCall();
-	while ( $data = $query -> fetch()) {
+	$query = historyCall(); // Recovery of the history of the client.
+	while ( $data = $query -> fetch()) { // Display all informations.
 
 		echo"<tr>
 			 <td>".$data['achats.date'].
@@ -26,7 +26,7 @@
 		;
 		$test = true;
 
-	} if (!$test) {
+	} if (!$test) { // Else, if there is no history to display.
 
 		echo"<tr><td><td><td><td colspan=3>Aucun achat effectué";
 	}

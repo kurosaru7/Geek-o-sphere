@@ -9,13 +9,13 @@
 			<th>Modifier Quantité
 			<th colspan=2>Détail
 		 "
-	;
+	; // Display all table name.
 
 	$test = false;
 
 
 	$query = basketCall();
-	while ( $data = $query -> fetch()) {
+	while ( $data = $query -> fetch()) { // Display all lines order by informations.
 
 
 		echo"<tr>
@@ -42,7 +42,7 @@
 			"<td><a href='./remove_basket.php?id=".$data['achats.id']."'><button>Annuler</button></a>";
 		$test = true;
 
-	} if (!$test) {
+	} if (!$test) { // If there is no line to display.
 
 		echo"<tr><td><td><td><td><td colspan=2>Panier vide";
 	}
