@@ -20,7 +20,7 @@
 			"<td>".$data['achats.time'].
 			"<td>".utf8_encode($data['achats.etat']).
 			"<td>".$data['achats.quantite'].
-			"<td>".$data['magasins.nom'].
+			"<td>".$data['points_de_livraison.nom'].
 			"<td>".utf8_encode($data['articles.nom']).
 			"<td><a href='detailed_item.php?id=".$data['achats.idArticles']."'><button>...</button></a>"
 		;

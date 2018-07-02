@@ -143,9 +143,9 @@ function historyCall() {
 									`achats`.etat AS "achats.etat", `achats`.quantite AS "achats.quantite",
 									`clients`.idClients AS "clients.idClients", `clients`.pseudo AS "clients.pseudo",
 									`articles`.idArticles AS "articles.idArticles", `articles`.nom AS "articles.nom",
-                  `magasins`.nom AS "magasins.nom"
-							FROM    achats, clients, articles, magasins
-							WHERE ( `magasins`.idMagasins=`achats`.idMagasins AND `achats`.idArticles=`articles`.idArticles
+                  `points_de_livraison`.nom AS "points_de_livraison.nom"
+							FROM    achats, clients, articles, points_de_livraison
+							WHERE ( `points_de_livraison`.idPdLs=`achats`.idMagasins AND `achats`.idArticles=`articles`.idArticles
 							        AND `clients`.idClients=`achats`.idClients
 							        AND `achats`.etat!="Panier"
 									AND `clients`.pseudo="'.$_SESSION['pseudo'].'"
