@@ -20,6 +20,35 @@
 		$wallet = $data['clients.credit'];
 	}
 
+	if ($count >= 1500) {
+
+		$reduc = $count * (35/100);
+		$count = $count - $reduc;
+
+	} else if ($count >= 1000) {
+
+		$reduc = $count * (25/100);
+		$count = $count - $reduc;
+
+	} else if ($count >= 500) {
+
+		$reduc = $count * (15/100);
+		$count = $count - $reduc;
+
+	} else if ($count >= 250) {
+
+		$reduc = $count * (10/100);
+		$count = $count - $reduc;
+
+	} else if ($count >= 100) {
+
+		$reduc = $count * (5/100);
+		$count = $count - $reduc;
+
+	}
+
+	$count = round($count, 2);
+
 	emptyWallet($wallet-$count);
 
 	if (isset($test)) {

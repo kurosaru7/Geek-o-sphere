@@ -9,8 +9,12 @@
 <body>
   	
     <div class="align_modif">
+    <center>Modification des informations</center>
+      <?php if (isset($result)){
+        echo $result;
+      }
+      ?>
     <center>
-      Modification des informations
   		<?php include('./navigation_bar.php'); ?>
       <form action="./modif.php" method="POST">
         <?php include('./modify_client_1.php'); ?>
@@ -19,10 +23,6 @@
     </form>
   </center>
     <br><a href="./customer_page.php"> <button class="modification2">Retour</button></a><br><br>
-    <?php if (isset($result)){
-      echo $result;
-    }
-    ?>
     </div>
   </body>
 </html>

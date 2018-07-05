@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `geek-o-sphere`.`articles` (
 	  `categorie` VARCHAR(12) NULL,
 	  `nom` VARCHAR(100) NULL,
 	  `description` VARCHAR(140) NULL,
-	  `image` VARCHAR(45) NULL,
+	  `image` VARCHAR(250) NULL,
 	  `quantite` INT(4) NULL,
 	  `idMagasins` INT(3) NOT NULL,
 	  `prix` DECIMAL(6,2) NULL,

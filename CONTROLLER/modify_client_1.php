@@ -7,8 +7,7 @@
 
 	$data2 = getPdlName($data['idPdLs']);
 	while ($shop_name = $data2 -> fetch()) {
-		echo '<br>
-		';
+
 		echo '<br><input type="text" maxlength=30 class="connection_text" placeholder="Nom"name="nom" value="'.utf8_encode($data['nom']).'">
 		';
 		echo '<br><input type="text" maxlength=30 class="connection_text" placeholder="Prénom" name="prenom" value="'.utf8_encode($data['prenom']).'">

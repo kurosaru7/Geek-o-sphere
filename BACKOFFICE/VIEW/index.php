@@ -6,7 +6,8 @@
 		<link rel="stylesheet" href="../VIEW/style.css" />
 	</head>
 	<body>
-		<center>
+		<center><br>
+			<h2 class="bo">BACK OFFICE</h2>
 			<img src="../VIEW/logo.png" class ="image" />
 			<form action ="./index.php" method ="get">
 				<input type = "password" placeholder="Mot de passe" class="connection_text" name ="pwd" id="psw" ><br>
